@@ -41,4 +41,5 @@ int main()
 	else {
 		cout << "Sorry, " << word << " not found" << endl;
 	}
+	// string.swap(test1, test2); = swap test1 with test2
 }
