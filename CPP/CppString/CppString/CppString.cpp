@@ -16,7 +16,7 @@ int main()
 
 	cout << s7.find("This") << "\n" << s7.find("is") << "\n" << s7.find("test") << endl;
 	cout << s7.find("is", 4) << endl;
-	cout << s7.substr(0, 4);
+	cout << s7.substr(0, 4); //display from a to b
 	cout << s7.erase(0, 5) << endl;
 	cout << s2.length() << endl;
 	s2 += " Cena";
