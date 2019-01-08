@@ -1,0 +1,1 @@
+public class FullBoxException extends java.lang.Exception{}
