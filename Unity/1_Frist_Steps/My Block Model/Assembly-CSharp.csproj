@@ -62,17 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Introducer.cs" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -289,9 +292,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/RemiAndAgata/Documents/GitHub/Projekty/Unity/1_Frist_Steps/My Block Model/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
