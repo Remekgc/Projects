@@ -43,7 +43,16 @@ public class Rocket : MonoBehaviour
         if (Debug.isDebugBuild)
         {
             RespondToDebugKeys();
-        }     
+        }
+        BackToMenu();
+    }
+
+    private static void BackToMenu()
+    {
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void RespondToDebugKeys()
