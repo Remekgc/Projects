@@ -5,9 +5,16 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float speed = 45f;
-    [Tooltip("In m")] [SerializeField] float xRange = 20f;
-    [Tooltip("In m")] [SerializeField] float yRange = 10f;
+    [Tooltip("In ms^-1")] [SerializeField] float speed = 20f;
+    [Tooltip("In m")] [SerializeField] float xRange = 5f;
+    [Tooltip("In m")] [SerializeField] float yRange = 3f;
+
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float controlPitchFactor = -10f;
+    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float controlRollFactor = -10f;
+
+    float xThrow, yThrow;
 
     void Start()
     {
@@ -20,19 +27,32 @@ public class Player : MonoBehaviour
         ProcessRotation();
     }
 
+    private void ProcessRotation()
+    {
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+
+        float yaw = transform.localPosition.x * positionYawFactor;
+
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
     private void ProcessTranslation()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // get input and change value from -1 to 1 on x
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical"); // get input and change value from -1 to 1 on y
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // get input and change value from -1 to 1 on x
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical"); // get input and change value from -1 to 1 on y
 
         float xOffset = xThrow * speed * Time.deltaTime; // fix movement to be framerate independent 
         float yOffset = yThrow * speed * Time.deltaTime;
 
-        float rawNewXPos = transform.localPosition.x + xOffset; // calcualte position
-        float clampedXPos = Mathf.Clamp(rawNewXPos, -xRange, xRange); //set limits o movement
+        float rawXPos = transform.localPosition.x + xOffset; // calcualte position
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange); //set limits o movement
 
-        float rawNewYPos = transform.localPosition.y + yOffset;
-        float clampedYPos = Mathf.Clamp(rawNewYPos, -yRange, yRange);
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
