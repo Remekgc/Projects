@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <vector>
 //#include <string>
 
 using namespace std;
@@ -59,16 +60,72 @@ void PointerArthmetic() {
 	}
 }
 
-void PonintersToConstans() {
+void double_data(int* int_ptr) {
+	*int_ptr *= 2;
+}
 
+void PonintersToConstans() {
+	int value{ 10 };
+	int* int_ptr{nullptr};
+
+	cout << "Value: " << value << endl; 
+
+	double_data(&value);
+
+	cout << "Value: " << value << endl;
+	cout << "--------------------------" << endl;
+
+	int_ptr = &value;
+	double_data(int_ptr);
+
+	cout << "Value: " << value << endl;
+	cout << endl;
+}
+
+void swap(int* a, int* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void SwapPointers() {
+	int x{ 100 }, y{ 200 };
+
+	cout << "\nx: " << x << endl;
+	cout << "y: " << y << endl;
+
+	swap(&x, &y);
+
+	cout << "\nx: " << y << endl;
+	cout << "y: " << y << endl;
+
+	cout << endl;
+}
+
+void DisplayVector( const vector<string> *const v) {
+	//(*v).at(0) = "Funny"; won't work because it's const
+	for (auto str : *v) {
+		cout << str << " ";
+	}
+	cout << endl;
+
+	//v = nullptr; won't work because it's const
+}
+
+void PointerVector() {
+	vector<string> stooges{ "Lary", "Moe", "Curly" };
+	DisplayVector(&stooges);
 }
 
 int main()
 {
     cout << "Hello sunshine!\n";
-	PointerTest();
+	//PointerTest();
 	//pointerArrays();
 	//PointerArthmetic();
+	//PonintersToConstans();
+	//SwapPointers();
+	PointerVector();
 }
 
 
