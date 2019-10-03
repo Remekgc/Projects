@@ -120,14 +120,15 @@ void PointerVector() {
 int* create_array(size_t size, int init_value = 0) {
 	int* new_storage{ nullptr };
 	new_storage = new int[size];
-	for (size_t i{ 0 }; i < size; ++i) {
+
+	for (size_t i{0}; i < size; ++i) {
 		*(new_storage + i) = init_value;
 	}
 	return new_storage;
 }
 
 void display(const int* const array, size_t size) {
-	for (size_t i{ 0 }; i < size; ++i) {
+	for (size_t i{0}; i < size; ++i) {
 		cout << array[i] << " ";
 	}
 	cout << endl;
@@ -177,6 +178,51 @@ void PlayingWithReferences() {
 
 }
 
+void print(int arr[], int size) {
+	cout << "Array:" << endl;
+
+	for (int i{0}; i < size; i++)
+	{
+		cout << "Element " << i + 1 << ": " << arr[i] << endl;
+	}
+}
+
+int* apply_all(int arr1[], int size1, int arr2[], int size2) {
+	int* result{ nullptr };
+	result = new int[size1*size2];
+	int allocator = 0;
+
+	for (int i{0}; i < size1; i++)
+	{
+		for (int x{0}; x < size2; x++)
+		{
+			*(result + allocator) = arr1[i] * arr2[x];
+			cout << *(result + allocator) << endl;
+			allocator++;
+		}
+	}
+	
+	return result;
+}
+
+void SectionChallange() {
+	int array1[]{ 1,2,3,4,5 };
+	int array2[]{ 10,20,30 };
+
+	cout << "Array 1: ";
+	print(array1, 5);
+
+	cout << "Array 1: ";
+	print(array1, 3);
+
+	int* results = apply_all(array1, 5, array2, 3);
+	
+	cout << "Result";
+	print(results, 15);
+	delete[] results;
+
+}
+
 int main()
 {
 	cout << "Examples of pointer usage\n";
@@ -188,6 +234,8 @@ int main()
 	PointerVector();
 	PointerFunction();
 	PlayingWithReferences();
+	SectionChallange();
+
 }
 
 
