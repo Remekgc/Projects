@@ -150,16 +150,44 @@ void PointerFunction() {
 
 }
 
+void PlayingWithReferences() {
+	vector<string> names{ "Remy", "Agata", "Jeff" };
+	
+	for (auto str : names) {
+		str = "Jack"; //str here is a copy of each vector element in names
+	}
+
+	for (auto str : names)
+	{
+		cout << str << endl;
+	}
+
+	for (auto& str : names) {
+		str = "Sparrow"; //Here we change the reference point so names got edited
+	}
+
+	for (auto str : names)
+	{
+		cout << str << endl; //here we make a copy so it's not as efficient as using the reference
+	}
+	//More efficent way to display it would be:
+	for (auto const& str : names) { //used constant to pervent the value form changing
+		cout << str << endl;
+	}
+
+}
+
 int main()
 {
-	cout << "Hello sunshine!\n";
-	//PointerTest();
-	//pointerArrays();
-	//PointerArthmetic();
-	//PonintersToConstans();
-	//SwapPointers();
-	//PointerVector();
+	cout << "Examples of pointer usage\n";
+	PointerTest();
+	pointerArrays();
+	PointerArthmetic();
+	PonintersToConstans();
+	SwapPointers();
+	PointerVector();
 	PointerFunction();
+	PlayingWithReferences();
 }
 
 
