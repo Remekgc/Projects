@@ -66,9 +66,9 @@ void double_data(int* int_ptr) {
 
 void PonintersToConstans() {
 	int value{ 10 };
-	int* int_ptr{nullptr};
+	int* int_ptr{ nullptr };
 
-	cout << "Value: " << value << endl; 
+	cout << "Value: " << value << endl;
 
 	double_data(&value);
 
@@ -102,7 +102,7 @@ void SwapPointers() {
 	cout << endl;
 }
 
-void DisplayVector( const vector<string> *const v) {
+void DisplayVector(const vector<string>* const v) {
 	//(*v).at(0) = "Funny"; won't work because it's const
 	for (auto str : *v) {
 		cout << str << " ";
@@ -117,19 +117,53 @@ void PointerVector() {
 	DisplayVector(&stooges);
 }
 
+int* create_array(size_t size, int init_value = 0) {
+	int* new_storage{ nullptr };
+	new_storage = new int[size];
+	for (size_t i{ 0 }; i < size; ++i) {
+		*(new_storage + i) = init_value;
+	}
+	return new_storage;
+}
+
+void display(const int* const array, size_t size) {
+	for (size_t i{ 0 }; i < size; ++i) {
+		cout << array[i] << " ";
+	}
+	cout << endl;
+}
+
+void PointerFunction() {
+	int* my_array{ nullptr };
+	size_t size;
+	int int_value{};
+
+	cout << "\nHow many integers would you like to allocate?";
+	cin >> size;
+	cout << "What value would you like them initialized to?";
+	cin >> int_value;
+
+	my_array = create_array(size, int_value);
+	cout << "\n-------------------------------\n" << endl;
+	display(my_array, size);
+	delete[] my_array;
+
+}
+
 int main()
 {
-    cout << "Hello sunshine!\n";
+	cout << "Hello sunshine!\n";
 	//PointerTest();
 	//pointerArrays();
 	//PointerArthmetic();
 	//PonintersToConstans();
 	//SwapPointers();
-	PointerVector();
+	//PointerVector();
+	PointerFunction();
 }
 
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Run program: Ctrl + F5 or Debug > Start Without Debuggaing menu
 // Debug program: F5 or Debug > Start Debugging menu
 
 // Tips for Getting Started: 
