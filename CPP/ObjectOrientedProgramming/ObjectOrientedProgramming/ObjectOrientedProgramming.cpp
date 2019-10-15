@@ -56,12 +56,12 @@ int main()
 	//BasicClasses();
 	Account Remy;
 	Remy.set_Name("Remy");
-	Remy.set_Balance(69000000);
+	Remy.set_Balance(690000);
 
-	string AccName = Remy.get_Name;
-	float AccBal = Remy.get_Balance;
+	string AccName{ Remy.get_Name() };
+	float AccBal{ Remy.get_Balance() };
 
-	cout << "Account owner: " << AccName << "\n Balance: " << AccBal << endl;
+	cout << "Account owner: " << AccName << "\nBalance: " << AccBal << endl;
 }
 
 

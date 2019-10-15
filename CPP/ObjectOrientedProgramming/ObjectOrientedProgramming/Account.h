@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 #include <string>
 
 class Account
@@ -16,7 +16,7 @@ public:
 	float get_Balance();
 
 	std::string ShowAccountInfo() {
-		cout << "Account owner: " << Name << "\n Balance: " << Balance << endl;
+		std::cout << "Account owner: " << Name << "\n Balance: " << Balance << std::endl;
 	}
 };
 
