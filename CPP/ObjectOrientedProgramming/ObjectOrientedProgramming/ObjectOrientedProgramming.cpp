@@ -58,10 +58,15 @@ int main()
 	Remy.set_Name("Remy");
 	Remy.set_Balance(690000);
 
+	Account Anon, Fred{"Fred"}, Eddie{ "Eddie", 579.5f };
+
 	string AccName{ Remy.get_Name() };
 	float AccBal{ Remy.get_Balance() };
 
 	cout << "Account owner: " << AccName << "\nBalance: " << AccBal << endl;
+	Anon.ShowAccountInfo();
+	Fred.ShowAccountInfo();
+	Eddie.ShowAccountInfo();
 }
 
 
