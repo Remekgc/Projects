@@ -24,10 +24,7 @@ void BasicClasses()
 {
 	cout << "Basic classes:\n";
 
-	Player player1;
-	player1.Name = "Remy";
-	player1.health = 100;
-	player1.xp = 9323;
+	Player player1{"Remy", 100, 9323};
 	player1.talk("Hello there");
 
 	Player player2;
@@ -51,9 +48,8 @@ void BasicClasses()
 	delete enemy; //dynamic creation, has to be deleted
 }
 
-int main()
+void ExampleOfAccountClass()
 {
-	//BasicClasses();
 	Account Remy;
 	Remy.set_Name("Remy");
 	Remy.set_Balance(690000);
@@ -67,6 +63,12 @@ int main()
 	Anon.ShowAccountInfo();
 	Fred.ShowAccountInfo();
 	Eddie.ShowAccountInfo();
+}
+
+int main()
+{
+	BasicClasses();
+	ExampleOfAccountClass();
 }
 
 
