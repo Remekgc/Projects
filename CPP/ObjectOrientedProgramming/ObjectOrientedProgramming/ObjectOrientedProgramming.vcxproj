@@ -152,10 +152,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="AccountType2.cpp" />
+    <ClCompile Include="AccountType3.cpp" />
     <ClCompile Include="ObjectOrientedProgramming.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountType2.h" />
+    <ClInclude Include="AccountType3.h" />
     <ClInclude Include="ObjectOrientedProgramming.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

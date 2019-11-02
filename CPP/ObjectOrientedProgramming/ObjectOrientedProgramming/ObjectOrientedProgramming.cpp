@@ -6,9 +6,13 @@
 #include <vector>
 #include "ObjectOrientedProgramming.h"
 #include "Account.h"
+#include "AccountType2.h"
+#include "AccountType3.h"
 
 using namespace std;
 
+
+//Player class:
 class Player {
 public:
 	string Name;
@@ -48,26 +52,41 @@ void BasicClasses()
 	delete enemy; //dynamic creation, has to be deleted
 }
 
+void CopyConstructor(AccountType3 Stormtrooper) {
+	cout << "Name: " << Stormtrooper.get_Name() << "\nBalance: " << Stormtrooper.get_Balance() << endl;
+}
+
 void ExampleOfAccountClass()
 {
 	Account Remy;
 	Remy.set_Name("Remy");
-	Remy.set_Balance(690000);
+	Remy.set_Balance(690000.0f);
 
 	Account Anon, Fred{"Fred"}, Eddie{ "Eddie", 579.5f };
 
 	string AccName{ Remy.get_Name() };
-	float AccBal{ Remy.get_Balance() };
+	float AccBal{ Remy.get_Balance() }; 
 
-	cout << "Account owner: " << AccName << "\nBalance: " << AccBal << endl;
+	cout << "Account owner: " << AccName << "\n Balance: " << AccBal << endl;
 	Anon.ShowAccountInfo();
 	Fred.ShowAccountInfo();
 	Eddie.ShowAccountInfo();
+
+	cout << endl;
+
+	AccountType2 JayZ, Harry{ "Harry" }, Voldemort{ "Tom Riddle", 9000.0f};
+	AccountType3 Grizzly, Cat{ "Late" }, Dog{ "Dragon", 7000.0f };
+
+	CopyConstructor(Grizzly);
+	CopyConstructor(Dog);
+
+	//Note: in the program you can see that The copy was destryed at the end of a function as it supposed to be
+	cout << endl;
 }
 
 int main()
 {
-	BasicClasses();
+	//BasicClasses();
 	ExampleOfAccountClass();
 }
 
