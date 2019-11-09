@@ -154,13 +154,17 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="AccountType2.cpp" />
     <ClCompile Include="AccountType3.cpp" />
+    <ClCompile Include="Deep.cpp" />
     <ClCompile Include="ObjectOrientedProgramming.cpp" />
+    <ClCompile Include="Shallow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="AccountType2.h" />
     <ClInclude Include="AccountType3.h" />
+    <ClInclude Include="Deep.h" />
     <ClInclude Include="ObjectOrientedProgramming.h" />
+    <ClInclude Include="Shallow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,6 +8,8 @@
 #include "Account.h"
 #include "AccountType2.h"
 #include "AccountType3.h"
+#include "Shallow.h"
+#include "Deep.h"
 
 using namespace std;
 
@@ -83,11 +85,44 @@ void ExampleOfAccountClass()
 	//Note: in the program you can see that The copy was destryed at the end of a function as it supposed to be
 	cout << endl;
 }
+void display_shallow(Shallow s) {
+	cout << s.get_data() << endl;
+}
+
+void ShallowClass() {
+	Shallow shallowObj1{ 100 };
+	display_shallow(shallowObj1);
+
+	Shallow shallowObj2{ shallowObj1 };
+	shallowObj2.set_data(500);
+
+	//shallowCop.set_data(500);
+	//int shallowObjData = shallowObj.get_data();
+	
+	//Will end up with Crash
+}
+
+void display_deep(Deep s) {
+	cout << s.get_data() << endl;
+}
+
+void DeepClass() {
+	Deep deep1{ 100 };
+	display_deep(deep1);
+
+	Deep deep2{ deep1 };
+	deep1.set_data(9999);
+	display_deep(deep2);
+}
 
 int main()
 {
+	//UNCOMENT TO USE CLASSES:
+
 	//BasicClasses();
-	ExampleOfAccountClass();
+	//ExampleOfAccountClass();
+	//ShallowClass();
+	DeepClass();
 }
 
 
