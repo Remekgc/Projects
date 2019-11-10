@@ -155,7 +155,11 @@
     <ClCompile Include="AccountType2.cpp" />
     <ClCompile Include="AccountType3.cpp" />
     <ClCompile Include="Deep.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="Movies.cpp" />
     <ClCompile Include="ObjectOrientedProgramming.cpp" />
+    <ClCompile Include="PlayerStaticExample.cpp" />
     <ClCompile Include="Shallow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +167,11 @@
     <ClInclude Include="AccountType2.h" />
     <ClInclude Include="AccountType3.h" />
     <ClInclude Include="Deep.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="Movies.h" />
     <ClInclude Include="ObjectOrientedProgramming.h" />
+    <ClInclude Include="PlayerStaticExample.h" />
     <ClInclude Include="Shallow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

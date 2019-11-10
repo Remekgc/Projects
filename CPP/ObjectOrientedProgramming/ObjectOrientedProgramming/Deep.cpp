@@ -4,7 +4,7 @@ void Deep::set_data(int d) {
 	*data = d;
 }
 
-int Deep::get_data() {
+int Deep::get_data() const {
 	return *data;
 }
 

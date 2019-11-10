@@ -2,17 +2,18 @@
 
 #include <iostream>
 
-class Deep
+class Move
 {
 private:
 	int* data;
 
 public:
-	Deep(int d);
-	Deep(const Deep& source);
-	~Deep();
-
 	void set_data(int d);
 	int get_data() const;
+
+	Move(int d);
+	Move(const Move& source);
+	Move(Move&& source) noexcept;
+	~Move();
 };
 

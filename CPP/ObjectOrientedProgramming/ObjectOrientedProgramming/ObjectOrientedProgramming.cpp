@@ -10,6 +10,9 @@
 #include "AccountType3.h"
 #include "Shallow.h"
 #include "Deep.h"
+#include "Move.h"
+#include "PlayerStaticExample.h"
+#include "Movies.h"
 
 using namespace std;
 
@@ -115,14 +118,90 @@ void DeepClass() {
 	display_deep(deep2);
 }
 
+void MoveClass() {
+	vector<Move> vec;
+
+	vec.push_back(Move{ 10 });
+	vec.push_back(Move{ 20 });
+}
+
+void DisplayActivePlayers()
+{
+	cout << "Active Players: " << PlayerStaticExample::get_num_players() << endl;
+}
+
+void PlayerStatic() {
+	DisplayActivePlayers();
+	PlayerStaticExample hero{ "Hero" };
+	DisplayActivePlayers();
+	{
+		PlayerStaticExample Tom{ "Tom" };
+		DisplayActivePlayers();
+	}
+	DisplayActivePlayers();
+
+	PlayerStaticExample* Jerry = new PlayerStaticExample{ "Jerry", 100, 100 };
+	DisplayActivePlayers();
+	delete Jerry;
+	DisplayActivePlayers();
+}
+
+void increment_watched(Movies& movies,string name) {
+	if (movies.increment_watched(name)) {
+		cout << name << " watch incremented" << endl;
+	}
+	else {
+		cout << name << " not found" << endl;
+	}
+}
+
+void add_movie(Movies& movies, string name, string rating, int watched) {
+	if (movies.add_movie(name, rating, watched)) {
+		cout << name << " added" << endl;
+	}
+	else {
+		cout << name << " already exists" << endl;
+	}
+}
+
+void MoviesExample() {
+	Movies my_movies;
+
+	my_movies.display();
+
+	add_movie(my_movies, "Big", "PG-13", 2);                 // OK
+	add_movie(my_movies, "Star Wars", "PG", 5);             // OK
+	add_movie(my_movies, "Cinderella", "PG", 7);           // OK
+
+	my_movies.display();   // Big, Star Wars, Cinderella
+
+	add_movie(my_movies, "Cinderella", "PG", 7);            // Already exists
+	add_movie(my_movies, "Ice Age", "PG", 12);              // OK
+
+	my_movies.display();    // Big, Star Wars, Cinderella, Ice Age
+
+	increment_watched(my_movies, "Big");                    // OK
+	increment_watched(my_movies, "Ice Age");              // OK
+
+	my_movies.display();    // Big and Ice Age watched count incremented by 1
+
+	increment_watched(my_movies, "XXX");         // XXX not found
+}
+
 int main()
 {
+	//Note (Difference on Struct and Class): Struct is used for apssive objects with public access and usally have no methods
+
 	//UNCOMENT TO USE CLASSES:
 
 	//BasicClasses();
 	//ExampleOfAccountClass();
 	//ShallowClass();
-	DeepClass();
+	//DeepClass();
+	//MoveClass();
+	//PlayerStatic();
+	MoviesExample();
+
 }
 
 
