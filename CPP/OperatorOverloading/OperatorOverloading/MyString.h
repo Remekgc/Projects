@@ -2,17 +2,21 @@
 
 #include <iostream>
 
-class MyString
+class Mystring
 {
 private:
-	char* str;
+	char* str; // pointer to char[] that golds C-style string
 
 public:
-	MyString();
-	MyString(const char* s);
-	MyString(const MyString& source);
-	~MyString();
+	Mystring();
+	Mystring(const char* s);
+	Mystring(const Mystring& source);
+	~Mystring();
+
+	Mystring& operator = (const Mystring& rhs);
+
 	void display() const;
+
 	int get_length() const;
 	const char* get_str() const;
 };
