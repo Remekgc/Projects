@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "MyString.h"
+#include "Mystring2.h"
 #include "OperatorOverloading.h"
 
 using namespace std;
@@ -20,12 +21,12 @@ void mystring()
 	Jerry.display();
 }
 
-int main()
+void Example2()
 {
 	Mystring a{ "Hello" };                // overloaded constructor
 	Mystring b;                             // no-args contructor
 	b = a;                                      // copy assignment 
-												  // b.operator=(a)
+												// b.operator=(a)
 	b = "This is a test";                 // b.operator=("This is a test");
 
 	Mystring empty;                      // no-args constructor
@@ -51,8 +52,8 @@ int main()
 	cout << "=== Loop 1 ==================" << endl;
 	for (const Mystring& s : stooges_vec)
 		s.display();                                        // Larry
-																// Moe
-																//Curly
+															// Moe
+															//Curly
 	cout << "=== Loop 2 ==================" << endl;
 	for (Mystring& s : stooges_vec)
 		s = "Changed";                              // copy assignment
@@ -60,8 +61,81 @@ int main()
 	cout << "=== Loop 3 ================" << endl;
 	for (const Mystring& s : stooges_vec)
 		s.display();                                     // Changed
-															// Changed
-															// Changed
+														 // Changed
+														 // Changed
+}
+
+void MystringMoveAssignment()
+{
+	Mystring2 empty;                      // no-args constructor
+	Mystring2 larry("Larry");             // overloaded constructor
+	Mystring2 stooge{ larry };            // copy constructor 
+	Mystring2 stooges;                   // no-args constructor
+
+	empty = stooge;                     // copy assignment operator
+												  // stooge is an l-value
+
+	empty = "Funny";                    // move assignment operator
+												  // "Funny" is an r-value
+
+	empty.display();
+	larry.display();
+	stooge.display();
+	empty.display();
+
+	stooges = "Larry, Moe, and Curly";
+	stooges.display();
+
+	vector<Mystring2> stooges_vec;
+	stooges_vec.push_back("Larry");                // Move constructor
+	stooges_vec.push_back("Moe");                // Move constructor
+	stooges_vec.push_back("Curly");              // Move constructor    
+
+	cout << "=== Loop 1 ==================" << endl;
+	for (const Mystring2& s : stooges_vec)
+		s.display();
+
+	cout << "=== Loop 2 ==================" << endl;
+	for (Mystring2& s : stooges_vec)
+		s = "Changed";                                      // move assignment
+
+	cout << "=== Loop 3 ==================" << endl;
+	for (const Mystring2& s : stooges_vec)
+		s.display();
+}
+
+void OverloadingOperatorsAsMemberFunction() {
+	cout << boolalpha << endl;
+
+	Mystring2 larry{ "Larry" };
+	Mystring2 moe{ "Moe" };
+
+	Mystring2 stooge = larry;
+	larry.display();
+	moe.display();
+
+	cout << (larry == moe) << endl;
+	cout << (larry == stooge) << endl;
+
+	larry.display();
+	Mystring2 larry2 = -larry;
+	larry2.display();
+
+	Mystring2 stooges = larry + "Moe";
+
+	Mystring2 two_stooges = moe + " " + "Larry";
+	two_stooges.display();
+
+	Mystring2 three_stooges = moe + " " + larry + "Curly";
+	three_stooges.display();
+}
+
+int main()
+{
+	//mystring();
+	//Example2();
+	//MystringMoveAssignment();
+	OverloadingOperatorsAsMemberFunction();
 
 
 }
