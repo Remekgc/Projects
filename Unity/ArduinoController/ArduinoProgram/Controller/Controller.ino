@@ -25,7 +25,7 @@ SFE_LSM9DS1 library. It'll demo the following:
 
 Hardware setup: This example demonstrates how to use the
 LSM9DS1 with an SPI interface. The pin-out is as follows:
-  LSM9DS1 --------- Arduino
+         LSM9DS1 --------- Arduino
           CS_AG ------------- 9
           CS_M ------------- 10
           SDO_AG ----------- 12
