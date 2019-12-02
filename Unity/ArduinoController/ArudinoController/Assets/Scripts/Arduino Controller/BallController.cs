@@ -35,7 +35,7 @@ namespace ArduinoAccelerometer
         {
             ManageConnection();
 
-            transform.Translate(a * Time.deltaTime, 0, b * Time.deltaTime); // change ball possition by a and b values.
+            transform.Translate((a * Time.deltaTime) / 100, 0, (b * Time.deltaTime) / 100); // change ball possition by a and b values.
         }
 
         private void ManageConnection()

@@ -31,6 +31,7 @@ def socketListener():
     global clientSocket
     while True:
         clientSocket, address = s.accept()
+        print(clientSocket)
 
 def connecting():
     while True:
@@ -40,17 +41,14 @@ def connecting():
         global y1
         global y2
         try:
-            conn = serial.Serial('COM13', 9600)
+            conn = serial.Serial('COM8', 9600)
         except:
             pass
         try:
             line = conn.readline()
-
             line = line.decode("utf-8")
-
             line = str(line)
             line = line[:-2]
-            print("twoja stara 2")
         except:
             line = "0.0,0.0,"
         try:
