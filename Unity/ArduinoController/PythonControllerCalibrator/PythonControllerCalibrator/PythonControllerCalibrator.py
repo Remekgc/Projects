@@ -1,49 +1,117 @@
 import pygame
-from pygame.locals import QUIT
 import serial
+from pygame.locals import *
 import time
 import struct
 import socket
+import threading
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Creatring 'Server' socket to communicate with c# client
-s.bind((socket.gethostname(), 1234)) # [Hostname] = this machinee name, [port] = 1234
-s.listen(1) # listen for input every 1 sec
+global y1
+global y2
+
+y1 = 0.0
+y2 = 0.0
+
+screenWidth = 800
+screenHeight = 600
+
+pygame.init()
+surface = pygame.display.set_mode((screenWidth,screenHeight))
+
+pygame.display.set_caption("Remek&Adrian Flying Simulator")
+
+font = pygame.font.Font('freesansbold.ttf', 20)
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Creatring 'Server' socket to communicate with c# client
+s.bind((socket.gethostname(), 1234))  # [Hostname] = this machinee name, [port] = 1234
+s.listen(1)  # listen for input every 1 sec
 print(socket.gethostname())
 
-conn = serial.Serial('COM8', 9600)
+def socketListener():
+    global clientSocket
+    while True:
+        clientSocket, address = s.accept()
 
-#pygame.init()
-#surface = pygame.display.set_mode((400,400))
+def connecting():
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                going = False
+        global y1
+        global y2
+        try:
+            conn = serial.Serial('COM13', 9600)
+        except:
+            pass
+        try:
+            line = conn.readline()
 
-#print(surface.get_at((0,0)))
-y = 0.0
+            line = line.decode("utf-8")
+
+            line = str(line)
+            line = line[:-2]
+            print("twoja stara 2")
+        except:
+            line = "0.0,0.0,"
+        try:
+            clientSocket.send(bytes(line, "utf-8"))
+        except:
+            print("Client not connected")
+        splittedline = line.split(",")
+        del splittedline[-1]
+        try:
+            y2 = float(splittedline[0])
+        except:
+            print("can't read y2")
+            y2 = 0.0
+        try:
+            y1 = float(splittedline[1])
+        except:
+            print("can't read y1")
+            y1 = 0.0
+        print(y1)
+        print(y2)
+
+
+x = threading.Thread(target = connecting)
+
+x.start()
+
+socketThread = threading.Thread(target = socketListener)
+
+socketThread.start()
 
 while True:
-    t0 = time.time()
-    #pygame.display.update()
-    clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established")
-    #clientsocket.send(bytes("Welcome to the server\n","utf-8"))
-    #for event in pygame.event.get():
-        #if event.type == QUIT:
-        #    going = False
+    pygame.display.update()
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            going = False
 
     while True:
-        line = conn.readline()
-        print(line)
-        line = line.decode("utf-8")
-        print(line)
-        print(line)
-        line = str(line)
-        line = line[:-2]
-        print(line)
-        print(line)
-        #line = line.encode("utf-8")
-        clientsocket.send(bytes(line, "utf-8"))
-        #y = float(line)
-        #pygame.draw.aaline(surface, (0, 0, 255), (0, 200-y), (400, 200+y))
-        #print(line)
-        #print(y)
-        time.sleep(1)
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                going = False
+        surface.fill((0, 0, 0))
 
-s.close()
+        textToRender = ("PITCH: " + str(y2))
+        textToRender2 = ("ROLL: " + str(y1))
+        text = font.render(textToRender, True, (0, 0, 255), (0, 0, 0))
+        text2 = font.render(textToRender2, True, (0, 0, 255), (0, 0, 0))
+
+        textRect = text.get_rect()
+        textRect2 = text.get_rect()
+
+        textRect.center = (75, 25)
+        textRect2.center = (75, 50)
+
+        surface.blit(text, textRect)
+        surface.blit(text2, textRect2)
+
+        pygame.draw.aaline(surface, (0, 0, 255), (screenWidth/2, 0),(screenWidth/2, screenHeight))
+        pygame.draw.aaline(surface, (0, 0, 255), (0, (screenHeight/2)-int(y1*2.2)), (screenWidth, (screenHeight/2)+int(y1*2.2)))
+        pygame.draw.circle(surface, (255, 0, 0), (int(screenWidth/2), int(screenHeight/2)-int(y2*5)), 5)
+        pygame.display.update()
+        pygame.display.flip()
+        #time.sleep(1)
+
+#s.close()
