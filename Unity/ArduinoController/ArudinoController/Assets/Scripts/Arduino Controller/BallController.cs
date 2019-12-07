@@ -35,7 +35,7 @@ namespace ArduinoAccelerometer
         {
             ManageConnection();
 
-            transform.Translate((a * Time.deltaTime) / 100, 0, (b * Time.deltaTime) / 100); // change ball possition by a and b values.
+            transform.Translate((a * Time.deltaTime) / 50, 0, (b * Time.deltaTime) / 50); // change ball possition by a and b values.
         }
 
         private void ManageConnection()
@@ -116,7 +116,7 @@ namespace ArduinoAccelerometer
                 }
                 else // if item(char) = ',' then we cut the string, add temp to the list and convert it in the way
                 {
-                    print(temp);
+                    //print(temp);
                     DecodedData.Add(float.Parse(temp));
                     temp = "";
                 }
@@ -124,7 +124,7 @@ namespace ArduinoAccelerometer
 
             a = DecodedData[0];
             b = DecodedData[1];
-            print("Decoded Data:");
+            //print("Decoded Data:");
             //Uncomment to see the values in inspector console
             /* 
             foreach (var item in DecodedData)
