@@ -5,3 +5,5 @@ void mystring();
 void Example2();
 
 void MystringMoveAssignment();
+
+void OverloadingInsertionAndExtraction();

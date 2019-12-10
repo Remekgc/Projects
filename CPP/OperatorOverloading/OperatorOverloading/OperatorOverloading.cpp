@@ -6,15 +6,16 @@
 #include <vector>
 #include "MyString.h"
 #include "Mystring2.h"
+#include "MyStringV3.h"
 #include "OperatorOverloading.h"
 
 using namespace std;
 
 void mystring()
 {
-	Mystring empty;
-	Mystring Tom("Tom");
-	Mystring Jerry(Tom);
+	MyString empty;
+	MyString Tom("Tom");
+	MyString Jerry(Tom);
 
 	empty.display();
 	Tom.display();
@@ -23,16 +24,16 @@ void mystring()
 
 void Example2()
 {
-	Mystring a{ "Hello" };                // overloaded constructor
-	Mystring b;                             // no-args contructor
+	MyString a{ "Hello" };                // overloaded constructor
+	MyString b;                             // no-args contructor
 	b = a;                                      // copy assignment 
 												// b.operator=(a)
 	b = "This is a test";                 // b.operator=("This is a test");
 
-	Mystring empty;                      // no-args constructor
-	Mystring larry("Larry");             // overloaded constructor
-	Mystring stooge{ larry };            // copy constructor 
-	Mystring stooges;                   // no-args constructor
+	MyString empty;                      // no-args constructor
+	MyString larry("Larry");             // overloaded constructor
+	MyString stooge{ larry };            // copy constructor 
+	MyString stooges;                   // no-args constructor
 
 	empty = stooge;                     // copy assignment operator
 
@@ -44,22 +45,22 @@ void Example2()
 	stooges = "Larry, Moe, and Curly";
 	stooges.display();                              // Larry, Moe, and Curly : 21
 
-	vector<Mystring> stooges_vec;
+	vector<MyString> stooges_vec;
 	stooges_vec.push_back("Larry");
 	stooges_vec.push_back("Moe");
 	stooges_vec.push_back("Curly");
 
 	cout << "=== Loop 1 ==================" << endl;
-	for (const Mystring& s : stooges_vec)
+	for (const MyString& s : stooges_vec)
 		s.display();                                        // Larry
 															// Moe
 															//Curly
 	cout << "=== Loop 2 ==================" << endl;
-	for (Mystring& s : stooges_vec)
+	for (MyString& s : stooges_vec)
 		s = "Changed";                              // copy assignment
 
 	cout << "=== Loop 3 ================" << endl;
-	for (const Mystring& s : stooges_vec)
+	for (const MyString& s : stooges_vec)
 		s.display();                                     // Changed
 														 // Changed
 														 // Changed
@@ -130,13 +131,105 @@ void OverloadingOperatorsAsMemberFunction() {
 	three_stooges.display();
 }
 
+void OverloadingInsertionAndExtraction()
+{
+	MyStringV3 larry{ "Larry" };
+	MyStringV3 moe{ "Moe" };
+	MyStringV3 curly;
+
+	cout << "Enter the third stooge's first name: ";
+	cin >> curly;
+
+	cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << endl;
+
+	cout << "\nEnter the three stooges names separated by a space: ";
+	cin >> larry >> moe >> curly;
+
+	cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << endl;
+}
+
+void FullUsageOfOverloads() {
+	cout << boolalpha << endl;
+	MyString a{ "frank" };
+	MyString b{ "frank" };
+	cout << (a == b) << endl;         // true
+	cout << (a != b) << endl;           // false
+
+	b = "george";
+	cout << (a == b) << endl;         // false
+	cout << (a != b) << endl;          // true
+	cout << (a < b) << endl;         // true
+	cout << (a > b) << endl;          // false
+
+	MyString s1{ "REMI" };
+	s1 = -s1;
+	cout << s1 << endl;             // remi              
+
+	s1 = s1 + "*****";
+	cout << s1 << endl;             // remi*****       
+
+	s1 += "-----";                      // remi*****-----
+	cout << s1 << endl;
+
+	MyString s2{ "12345" };
+	s1 = s2 * 3;
+	cout << s1 << endl;           // 123451234512345
+
+	MyString s3{ "abcdef" };
+	s3 *= 5;
+	cout << s3 << endl;             // abcdefabcdefabcdefabcdefabcdef
+
+	MyString repeat_string;
+	int repeat_times;
+	cout << "Enter a string to repeat: " << endl;
+	cin >> repeat_string;
+	cout << "How many times would you like it repeated? " << endl;
+	cin >> repeat_times;
+	repeat_string *= repeat_times;
+	cout << "The resulting string is: " << repeat_string << endl;
+
+	cout << (repeat_string * 12) << endl;
+
+	repeat_string = "RepeatMe";
+	cout << (repeat_string + repeat_string + repeat_string) << endl;
+
+	repeat_string += (repeat_string * 3);
+	cout << repeat_string << endl;
+
+	repeat_string = "RepeatMe";
+	repeat_string += (repeat_string + repeat_string + repeat_string);
+
+
+	MyString s = "Remi";
+	++s;
+	cout << s << endl;                  // Remi
+
+	s = -s;
+	cout << s << endl;                  // remi
+	MyString result;
+	result = ++s;
+	cout << s << endl;                  // Remi
+	cout << result << endl;           // Remi
+
+	s = "Frank";
+	s++;
+	cout << s << endl;                  // Remi
+
+	s = -s;
+	cout << s << endl;                  // remi
+	result = s++;
+	cout << s << endl;                  // Remi
+	cout << result << endl;           // remi
+}
+
 int main()
 {
 	//mystring();
 	//Example2();
 	//MystringMoveAssignment();
-	OverloadingOperatorsAsMemberFunction();
-
+	//OverloadingOperatorsAsMemberFunction();
+	//OverloadingInsertionAndExtraction();
+	FullUsageOfOverloads();
 
 }
 

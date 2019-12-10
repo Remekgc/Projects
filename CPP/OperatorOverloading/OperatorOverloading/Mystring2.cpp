@@ -146,3 +146,4 @@ Mystring2 operator+(const Mystring2& lhs, const Mystring2& rhs) {
 
 	return temp;
 }
+

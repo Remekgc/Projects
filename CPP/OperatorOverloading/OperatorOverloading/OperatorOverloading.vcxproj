@@ -154,11 +154,13 @@
   <ItemGroup>
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="Mystring2.cpp" />
+    <ClCompile Include="MyStringV3.cpp" />
     <ClCompile Include="OperatorOverloading.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
     <ClInclude Include="Mystring2.h" />
+    <ClInclude Include="MyStringV3.h" />
     <ClInclude Include="OperatorOverloading.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
