@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{AF7D5B39-3760-4985-82EC-B2609C13DDD9}</ProjectGuid>
+    <ProjectGuid>{D5D5D236-4BF6-4527-87AD-93967F326A6A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Iheritance</RootNamespace>
+    <RootNamespace>Inheritance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
-    <ClCompile Include="Iheritance.cpp" />
+    <ClCompile Include="Inheritance.cpp" />
     <ClCompile Include="Savings_Account.cpp" />
   </ItemGroup>
   <ItemGroup>
