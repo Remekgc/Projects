@@ -2,11 +2,25 @@
 
 public class CameraFollow : MonoBehaviour {
 
+    public static CameraFollow Instance { get; private set; }
     public Transform target;
     public float smoothSpeed = 10f;
     public Vector3 offset;
 
-	void Start () {
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Start () {
         target = GameObject.Find("Player").transform;
 	}
 	

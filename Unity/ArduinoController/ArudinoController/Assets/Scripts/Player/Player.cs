@@ -5,12 +5,27 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Easy to access static values used to communicate between 2 scenes
-    public static GameObject playerObject;
-    public static int Lifes = 3;
-    public static Menu menu;
+    public static Player Instance { get; private set; }
+    public GameObject playerObject;
+    public int Lifes = 3;
+    public Menu menu;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            playerObject = gameObject;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     //change controlls according to given index
-    public static void ChangeControlls(int index)
+    public void ChangeControlls(int index)
     {
         switch (index)
         {
@@ -29,20 +44,26 @@ public class Player : MonoBehaviour
         }
     }
 
-    public static void AddLife()
+    public void AddLife()
     {
-        if (Player.Lifes < 3)
+        if (Lifes < 3)
         {
-            Player.Lifes += 1;
-            Player.menu.SetLifes();
+            Lifes += 1;
+            menu.SetLifes();
         }
     }
 
-    public static void RemoveLife()
+    public void RemoveLife()
     {
-        if (Lifes > 0)
+        if (Lifes > 1)
         {
             Lifes -= 1;
+            menu.SetLifes();
+        }
+        else
+        {
+            Lifes = 3;
+            menu.ResetTheGame();
             menu.SetLifes();
         }
     }

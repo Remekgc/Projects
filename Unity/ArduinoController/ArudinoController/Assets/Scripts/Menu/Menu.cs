@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public static Menu Instance { get; private set; }
     [SerializeField]
     private Sprite EmptyHeart = null;
     [SerializeField]
@@ -14,9 +15,23 @@ public class Menu : MonoBehaviour
 
     public List<Image> Hearts = new List<Image>();
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        Player.menu = this;
+        Player.Instance.menu = this;
+        print("Welcome" + Player.Instance.gameObject.name);
         SetFullscreen(true); //set fullscreen on start
         SetQuality(0); // set to low quality on start
     }
@@ -34,8 +49,7 @@ public class Menu : MonoBehaviour
             {
                 Time.timeScale = 0;
                 MainMenu.SetActive(true);
-            }
-            
+            }  
         }
     }
 
@@ -51,12 +65,12 @@ public class Menu : MonoBehaviour
 
     public void SetControlls (int controllsIndex)
     {
-        Player.ChangeControlls(controllsIndex);
+        Player.Instance.ChangeControlls(controllsIndex);
     }
 
     public void SetLifes()
     {
-        int lifes = Player.Lifes;
+        int lifes = Player.Instance.Lifes;
         for (int i = 0; i < 3; i++)
         {
             if (lifes != 0)
@@ -71,7 +85,13 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void LoadRunner()
+    public void ResetTheGame()
+    {
+        WorldManager.LoadStartScene();
+        Time.timeScale = 1;
+    }
+
+    public void StartRunner()
     {
         WorldManager.LoadRunnerScene();
         Time.timeScale = 1;

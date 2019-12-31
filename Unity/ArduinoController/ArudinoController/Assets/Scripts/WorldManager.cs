@@ -6,13 +6,18 @@ using UnityEngine.UI;
 
 public class WorldManager : MonoBehaviour
 {
-    public List<GameObject> KeepBetweenScenes = new List<GameObject>();
+    public static WorldManager Instance { get; private set; }
 
     void Awake()
     {
-        foreach (var item in KeepBetweenScenes)
+        if (Instance == null)
         {
-            DontDestroyOnLoad(item);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -25,6 +30,11 @@ public class WorldManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public static void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public static void LoadRunnerScene()

@@ -14,9 +14,14 @@ public class PcControls : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        ManageInput();
+    }
+
+    private void ManageInput()
+    {
         if (Input.GetKey(KeyCode.W))
         {
-            playerRigidbody.AddForce(Vector3.forward  * Time.deltaTime * Speed);
+            playerRigidbody.AddForce(Vector3.forward * Time.deltaTime * Speed);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -32,7 +37,7 @@ public class PcControls : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            playerRigidbody.AddForce(Vector3.up * 500 * Time.deltaTime);
+            playerRigidbody.AddForce(Vector3.up * 1500 * Time.deltaTime);
         }
     }
 }

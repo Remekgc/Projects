@@ -256,29 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f627154ce0e9a3a4a964e7aa38ccc06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeepBetweenScenes:
-  - {fileID: 409116258}
-  - {fileID: 534669902}
-  - {fileID: 671472201}
-  - {fileID: 986406996}
---- !u!1 &534669902 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7276226384239861417, guid: ee438d5dd3b25994d9d70545aed3f075,
-    type: 3}
-  m_PrefabInstance: {fileID: 7276226384445273319}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &671472201 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1324872244356598, guid: dd8d27f976ca36848980c34c9fb5e642,
-    type: 3}
-  m_PrefabInstance: {fileID: 1406728086}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &986406996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8149270306158879708, guid: 178f3c4c73b80744d89c7a1d7f3b8953,
-    type: 3}
-  m_PrefabInstance: {fileID: 8149270305533477768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1013007024
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,12 +463,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114993241748402894, guid: dd8d27f976ca36848980c34c9fb5e642,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 671472202, guid: dd8d27f976ca36848980c34c9fb5e642, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd8d27f976ca36848980c34c9fb5e642, type: 3}
 --- !u!1001 &7276226384445273319
 PrefabInstance:
