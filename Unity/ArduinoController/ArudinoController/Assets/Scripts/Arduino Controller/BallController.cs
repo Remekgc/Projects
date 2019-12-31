@@ -133,15 +133,6 @@ namespace ArduinoAccelerometer
             }
             */
         }
-
-        void OnDestroy()
-        {
-            //Clear threads to be secure - not required.
-            print("Closing threads");
-            connector.Abort();
-            reciver.Abort();
-            client.Close();
-        }
     }
 
 }
