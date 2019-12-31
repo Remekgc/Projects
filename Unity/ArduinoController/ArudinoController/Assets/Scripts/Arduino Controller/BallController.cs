@@ -31,7 +31,7 @@ namespace ArduinoAccelerometer
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             ManageConnection();
 

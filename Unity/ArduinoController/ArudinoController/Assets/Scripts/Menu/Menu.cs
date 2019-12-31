@@ -9,6 +9,9 @@ public class Menu : MonoBehaviour
     private Sprite EmptyHeart = null;
     [SerializeField]
     private Sprite FullHeart = null;
+    [SerializeField]
+    private GameObject MainMenu = null;
+
     public List<Image> Hearts = new List<Image>();
 
     void Start()
@@ -16,6 +19,24 @@ public class Menu : MonoBehaviour
         Player.menu = this;
         SetFullscreen(true); //set fullscreen on start
         SetQuality(0); // set to low quality on start
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (MainMenu.activeInHierarchy)
+            {
+                Time.timeScale = 1;
+                MainMenu.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                MainMenu.SetActive(true);
+            }
+            
+        }
     }
 
     public void SetQuality (int qualityIndex)
@@ -48,6 +69,12 @@ public class Menu : MonoBehaviour
                 Hearts[i].sprite = EmptyHeart;
             }
         }
+    }
+
+    public void LoadRunner()
+    {
+        WorldManager.LoadRunnerScene();
+        Time.timeScale = 1;
     }
 }
 
