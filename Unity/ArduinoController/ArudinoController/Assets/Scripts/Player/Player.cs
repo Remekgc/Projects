@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     // Easy to access static values used to communicate between 2 scenes
     public static Player Instance { get; private set; }
-    public GameObject playerObject;
     public int Lifes = 3;
     public Menu menu;
 
@@ -16,7 +15,6 @@ public class Player : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            playerObject = gameObject;
         }
         else
         {
@@ -30,16 +28,16 @@ public class Player : MonoBehaviour
         switch (index)
         {
             case 0:
-                playerObject.GetComponent<PcControls>().enabled = true;
-                playerObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = false;
+                gameObject.GetComponent<PcControls>().enabled = true;
+                gameObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = false;
                 break;
             case 1:
-                playerObject.GetComponent<PcControls>().enabled = false;
-                playerObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = true;
+                gameObject.GetComponent<PcControls>().enabled = false;
+                gameObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = true;
                 break;
             case 2:
-                playerObject.GetComponent<PcControls>().enabled = false;
-                playerObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = false;
+                gameObject.GetComponent<PcControls>().enabled = false;
+                gameObject.GetComponent<ArduinoAccelerometer.BallController>().enabled = false;
                 break;
         }
     }
@@ -65,6 +63,8 @@ public class Player : MonoBehaviour
             Lifes = 3;
             menu.ResetTheGame();
             menu.SetLifes();
+            menu.MainMenu.SetActive(true);
+            transform.position = new Vector3(0, 1, 0);
         }
     }
 }

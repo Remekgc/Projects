@@ -10,9 +10,8 @@ public class Menu : MonoBehaviour
     private Sprite EmptyHeart = null;
     [SerializeField]
     private Sprite FullHeart = null;
-    [SerializeField]
-    private GameObject MainMenu = null;
 
+    public GameObject MainMenu = null;
     public List<Image> Hearts = new List<Image>();
 
     void Awake()
@@ -87,13 +86,13 @@ public class Menu : MonoBehaviour
 
     public void ResetTheGame()
     {
-        WorldManager.LoadStartScene();
+        WorldManager.Instance.LoadStartScene();
         Time.timeScale = 1;
     }
 
     public void StartRunner()
     {
-        WorldManager.LoadRunnerScene();
+        WorldManager.Instance.LoadRunnerScene();
         Time.timeScale = 1;
     }
 }

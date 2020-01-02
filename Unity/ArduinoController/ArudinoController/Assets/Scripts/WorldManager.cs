@@ -32,12 +32,12 @@ public class WorldManager : MonoBehaviour
         
     }
 
-    public static void LoadStartScene()
+    public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
     }
 
-    public static void LoadRunnerScene()
+    public void LoadRunnerScene()
     {
         SceneManager.LoadScene(1);
     }

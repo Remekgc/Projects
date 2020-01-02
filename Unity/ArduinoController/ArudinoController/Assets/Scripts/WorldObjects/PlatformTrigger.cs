@@ -10,7 +10,6 @@ public class PlatformTrigger : MonoBehaviour {
     {
         if (enter)
         {
-            Player.Instance.RemoveLife();
             print("Player lifes left" + Player.Instance.Lifes);
             other.transform.position = new Vector3(0, 1, 0);
         }

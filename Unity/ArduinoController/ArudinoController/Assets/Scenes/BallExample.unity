@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 1187403612}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,8 +463,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 671472202, guid: dd8d27f976ca36848980c34c9fb5e642, type: 3}
+    - target: {fileID: 135551139900437828, guid: dd8d27f976ca36848980c34c9fb5e642,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 5ac73a069b7dc834aa0dccb105340960,
+        type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8d27f976ca36848980c34c9fb5e642, type: 3}
 --- !u!1001 &7276226384445273319
 PrefabInstance:
@@ -542,6 +547,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8149270305412348508, guid: 178f3c4c73b80744d89c7a1d7f3b8953,
+        type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8149270306158879697, guid: 178f3c4c73b80744d89c7a1d7f3b8953,
         type: 3}
       propertyPath: m_LocalPosition.x
