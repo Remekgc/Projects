@@ -154,6 +154,7 @@ MonoBehaviour:
   obstaclePrefabs:
   - {fileID: 977900358094519678, guid: bc06ee724c92a5847924f5ac6d168596, type: 3}
   spawnZ: 20
+  numberOfObstacles: 15
 --- !u!4 &144015706
 Transform:
   m_ObjectHideFlags: 0
@@ -410,8 +411,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.4644403, z: 1}
-  m_Center: {x: 0, y: 1.2322215, z: 0}
+  m_Size: {x: 4.8607674, y: 5.8811255, z: 1}
+  m_Center: {x: 0.025556568, y: 2.4405637, z: 0}
 --- !u!23 &1890312386
 MeshRenderer:
   m_ObjectHideFlags: 0
