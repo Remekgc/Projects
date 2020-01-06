@@ -148,13 +148,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Account_Util.cpp" />
+    <ClCompile Include="Checking_Account.cpp" />
     <ClCompile Include="Inheritance.cpp" />
     <ClCompile Include="Savings_Account.cpp" />
+    <ClCompile Include="Trust_Account.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="Account_Util.h" />
+    <ClInclude Include="Checking_Account.h" />
     <ClInclude Include="Inheritance.h" />
     <ClInclude Include="Savings_Account.h" />
+    <ClInclude Include="Trust_Account.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,20 +3,25 @@
 
 class Account
 {
-public:
-	friend std::ostream& operator<<(std::ostream& os, const Account& account);
+friend std::ostream& operator<<(std::ostream& os, const Account& account);
+
+private:
+	static constexpr const char* def_name = "Unnamed Account";
+	static constexpr double def_balance = 0.0;
 
 protected:
-	double balance;
 	std::string name;
-
+	double balance;
+	
 public:
-	Account();
+	//Account();
 	~Account();
 	Account(double amount);
+	Account(std::string name = def_name, double balance = def_balance);
+	//Account(std::string anme = "Unamed Account", double balance = 0.0);
 
-	void deposit(double amount);
-	void withdraw(double amount);
-
+	bool deposit(double amount);
+	bool withdrawal(double amount);
+	double get_balance() const;
 };
 

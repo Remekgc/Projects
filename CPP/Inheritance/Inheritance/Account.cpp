@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Account.h"
 
-Account::Account() :
+/*Account::Account() :
 	balance{ 0.0 }, name{"Anonymous"} {	
-}
+}*/
 
 Account::~Account() {
-	std::cout << "Destructor Called for Account" << std::endl;
+	//std::cout << "Destructor Called for Account of " + name << std::endl;
 }
 
 Account::Account(double balance)
@@ -14,24 +14,44 @@ Account::Account(double balance)
 
 }
 
-void Account::deposit(double amount) {
-	balance += amount;
-	std::cout << "Account deposit called with " << amount << std::endl;
+Account::Account(std::string name, double balance)
+	: name{ name }, balance{ balance } {
+
 }
 
-void Account::withdraw(double amount) {
-	if (balance - amount >= 0)
+bool Account::deposit(double amount) {
+	if (amount < 0)
 	{
-		balance -= amount;
-		std::cout << "Account withdraw called with " << amount << std::endl;
+		return false;
 	}
 	else
 	{
-		std::cout << "Insufficient funds" << std::endl;
+		balance += amount;
+		std::cout << "[Account deposit called with " << amount << " for " << name << "]" << std::endl;
+		return true;
+	}
+	
+}
+
+bool Account::withdrawal(double amount) {
+	if (balance - amount >= 0)
+	{
+		balance -= amount;
+		std::cout << "[Account withdraw called with " << amount << " for " << name << "]" << std::endl;
+		return true;
+	}
+	else
+	{
+		std::cout << "~Insufficient funds" << std::endl;
+		return false;
 	}
 }
 
+double Account::get_balance() const {
+	return balance;
+}
+
 std::ostream& operator<<(std::ostream& os, const Account& account) {
-	os << "Account balance: " << account.balance;
+	os << " Account balance: " << account.balance;
 	return os;
 }
