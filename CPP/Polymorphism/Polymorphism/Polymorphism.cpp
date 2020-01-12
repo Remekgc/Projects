@@ -1,20 +1,64 @@
 // Polymorphism.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include <vector>
 #include <iostream>
+
+using namespace std;
+
+class Account {
+public:
+	virtual void withdraw(double amount) {
+		cout << "In Account::withdraw" << endl;
+	}
+	virtual ~Account() { cout << "Account::destructor" << endl; }
+};
+
+class Checking : public Account {
+public:
+	virtual void withdraw(double amount) {
+		cout << "In Checking::withdraw" << endl;
+	}
+	virtual ~Checking() { cout << "Checking::destructor" << endl; }
+};
+
+class Savings : public Account {
+public:
+	virtual void withdraw(double amount) {
+		cout << "In Savings::withdraw" << endl;
+	}
+	virtual ~Savings() { cout << "Savings::destructor" << endl; }
+};
+
+class Trust : public Account {
+public:
+	virtual void withdraw(double amount) {
+		cout << "In Trust::withdraw" << endl;
+	}
+	virtual ~Trust() { cout << "Trust::destructor" << endl; }
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	cout << "Polymorphism Examples" << endl;
+	cout << "Pointers" << endl;
+
+	Account* p1 = new Account();
+	Account* p2 = new Savings();
+	Account* p3 = new Checking();
+	Account* p4 = new Trust();
+
+	p1->withdraw(1000);
+	p2->withdraw(1000);
+	p3->withdraw(1000);
+	p4->withdraw(1000);
+
+	cout << "\n ==== Clean up ====" << endl;
+	delete p1;
+	delete p2;
+	delete p3;
+	delete p4;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
