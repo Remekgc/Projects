@@ -7,7 +7,7 @@ using namespace std;
 
 class Account {
 public:
-	virtual void withdraw(double amount) {
+	virtual void withdraw(double amount) const {
 		cout << "In Account::withdraw" << endl;
 	}
 	virtual ~Account() { cout << "Account::destructor" << endl; }
@@ -15,7 +15,7 @@ public:
 
 class Checking : public Account {
 public:
-	virtual void withdraw(double amount) {
+	virtual void withdraw(double amount) const override {
 		cout << "In Checking::withdraw" << endl;
 	}
 	virtual ~Checking() { cout << "Checking::destructor" << endl; }
@@ -23,7 +23,7 @@ public:
 
 class Savings : public Account {
 public:
-	virtual void withdraw(double amount) {
+	virtual void withdraw(double amount) const override {
 		cout << "In Savings::withdraw" << endl;
 	}
 	virtual ~Savings() { cout << "Savings::destructor" << endl; }
@@ -31,7 +31,7 @@ public:
 
 class Trust : public Account {
 public:
-	virtual void withdraw(double amount) {
+	virtual void withdraw(double amount) const override {
 		cout << "In Trust::withdraw" << endl;
 	}
 	virtual ~Trust() { cout << "Trust::destructor" << endl; }
