@@ -41,7 +41,7 @@ def connecting():
         global y1
         global y2
         try:
-            conn = serial.Serial('COM8', 9600)
+            conn = serial.Serial('COM5', 9600)
         except:
             pass
         try:
