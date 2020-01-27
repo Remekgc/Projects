@@ -35,13 +35,13 @@ def socketListener():
 
 def connecting():
     while True:
-        for event in pygame.event.get():
+        for event in pygame.event.get(): 
             if event.type == QUIT:
                 going = False
         global y1
         global y2
         try:
-            conn = serial.Serial('COM5', 9600)
+            conn = serial.Serial('COM6', 250000)
         except:
             pass
         try:
