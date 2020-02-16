@@ -3,220 +3,14 @@
 #include <vector>
 #include <iostream>
 #include "Polymorphism.h"
+#include "I_Printable.h"
+#include "Account.h"
+#include "Savings_Account.h"
+#include "Trust_Account.h"
+#include "Checking_Account.h"
+#include "Account_Util.h"
 
 using namespace std;
-
-class I_Printable {
-	friend ostream& operator<<(ostream& os, const I_Printable& obj);
-
-public:
-	virtual void print(ostream& os) const = 0;
-	virtual ~I_Printable() = default;
-};
-
-ostream& operator<<(ostream& os, const I_Printable& obj) {
-	obj.print(os);
-	return os;
-}
-
-class Account : public I_Printable {
-	friend ostream& operator<<(ostream& os, const Account& account) {
-	};
-
-private:
-	static constexpr const char* def_name = "Unnamed Account";
-	static constexpr double def_balance = 0.0;
-
-protected:
-	string name;
-	double balance;
-
-public:
-	// Constructors
-	Account(string name = def_name, double balance = def_balance)
-		: name{ name }, balance{ balance } {
-	}
-
-	// Functions
-	virtual bool deposit(double amount) {
-		if (amount < 0)
-		{
-			return false;
-		}
-		else
-		{
-			balance += amount;
-			std::cout << "[Account deposit called with " << amount << " for " << name << "]" << std::endl;
-			return true;
-		}
-	}
-
-	virtual bool withdraw(double amount) {
-		if (balance - amount >= 0)
-		{
-			balance -= amount;
-			std::cout << "[Account withdraw called with " << amount << " for " << name << "]" << std::endl;
-			return true;
-		}
-		else
-		{
-			std::cout << "~Insufficient funds" << std::endl;
-			return false;
-		}
-	}
-
-	virtual double get_balance() const {
-		return balance;
-	}
-
-	virtual void print(ostream& os) const override {
-		os << "Account display [ " << name << " balance: " << balance << " ]";
-	}
-
-	virtual ~Account() = default;
-};
-
-class Checking : public Account {
-private:
-	static constexpr const char* def_name = "Unnamed Checking Account";
-	static constexpr double def_balance = 0.0;
-	static constexpr double def_int_rate = 0.0;
-
-protected:
-	double int_rate;
-
-public:
-	// Constructors
-	Checking(string name = def_name, double balance = def_balance, double int_rate = def_int_rate)
-		: Account{ name, balance }, int_rate{ int_rate }{
-	}
-
-	// Functions
-	virtual bool withdraw(double amount) override {
-		if (balance - amount >= 0)
-		{
-			balance -= amount;
-			std::cout << "[Checking Account withdraw called with " << amount << " for " << name << "]" << std::endl;
-			return true;
-		}
-		else
-		{
-			std::cout << "~Insufficient funds" << std::endl;
-			return false;
-		}
-	}
-
-	virtual void print(ostream& os) const override {
-		os << "Checking Account display [ " << name << " balance: " << balance << " ]";
-	}
-	virtual ~Checking() = default;
-};
-
-class Savings : public Account {
-
-private:
-	static constexpr const char* def_name = "Unnamed Savings Account";
-	static constexpr double def_balance = 0.0;
-	static constexpr double def_int_rate = 0.0;
-
-protected:
-	double int_rate;
-
-public:
-	// Constructors
-	Savings(string name = def_name, double balance = def_balance, double int_rate = def_int_rate)
-		: Account{ name, balance }, int_rate{ int_rate } {
-	}
-
-	// Functions
-	virtual bool deposit(double amount) override {
-		if (amount < 0)
-		{
-			return false;
-		}
-		else
-		{
-			balance += amount;
-			std::cout << "[Savings Account deposit called with " << amount << " for " << name << "]" << std::endl;
-			return true;
-		}
-	}
-
-	virtual bool withdraw(double amount) override {
-		if (balance - amount >= 0)
-		{
-			balance -= amount;
-			std::cout << "[Savings Account withdraw called with " << amount << " for " << name << "]" << std::endl;
-			return true;
-		}
-		else
-		{
-			std::cout << "~Insufficient funds" << std::endl;
-			return false;
-		}
-	}
-
-	virtual void print(ostream& os) const override {
-		os << "Savings Account display [ " << name << " balance: " << balance << " ]";
-	}
-	virtual ~Savings() = default;
-};
-
-class Trust : public Savings {
-
-private:
-	static constexpr const char* def_name = "Unnamed Trust Account";
-	static constexpr double def_balance = 0.0;
-	static constexpr double def_int_rate = 0.0;
-
-protected:
-	double int_rate;
-	int withdrawlsThisYear;
-
-public:
-	Trust(string name = def_name, double balance = def_balance, double int_rate = def_int_rate)
-		: Savings{ name, balance }, int_rate{ int_rate } {
-		withdrawlsThisYear = 0;
-	}
-
-	// Functions
-	virtual bool deposit(double amount) override {
-		if (amount >= 5000.0)
-		{
-			amount += 50.0;
-			std::cout << "Bonus 50.00$ has been added due to deposit larger than $5000.00" << std::endl;
-		}
-		return Account::deposit(amount);
-	}
-
-	virtual bool withdraw(double amount) override {
-		if (withdrawlsThisYear < 3)
-		{
-			if (amount < (balance * 0.2))
-			{
-				std::cout << "[Trust Account withdrawl called with " << amount << " From " << name << " Account]" << std::endl;
-				withdrawlsThisYear++;
-				return Account::withdraw(amount);
-			}
-			else
-			{
-				std::cout << "Withdrawl amount can't be larger than 20% of the current amount (20% of " << amount << " = " << (balance * 0.2) << ")" << std::endl;
-				return false;
-			}
-		}
-		else
-		{
-			std::cout << "Withdrawl limit for this account has been reached" << std::endl;
-			return false;
-		}
-	}
-
-	virtual void print(ostream& os) const override {
-		os << "Trust Account display [ " << name << " balance: " << balance << " ]";
-	}
-	virtual ~Trust() = default;
-};
-
 class Shape {
 private:
 	//atributes common to all shapes
@@ -276,76 +70,39 @@ void screen_refresh(const vector<Shape*>& shapes) { // reference to a pointer so
 	}
 }
 
-void display(const vector<Account*>& accounts) {
-	for (const auto& acc : accounts)
-	{
-		cout << acc << endl;
-	}
-};
-
-void deposit(vector<Account*>& accounts, double amount) {
-	for (auto& acc : accounts)
-	{
-		if (acc->withdraw(amount))
-		{
-			std::cout << "~Deposited" << amount << " to " << acc << "\n" << std::endl;
-		}
-		else
-		{
-			std::cout << "~Failed Deposit of " << amount << " to " << acc << "\n" << std::endl;
-		}
-	}
-};
-
-void withdrawal(vector<Account*>& accounts, double amount) {
-	for (auto& acc : accounts)
-	{
-		if (acc->withdraw(amount))
-		{
-			std::cout << "~Withdrew " << amount << " from " << acc << std::endl;
-		}
-		else
-		{
-			std::cout << "~Failed Withdrawal of " << amount << " from [" << acc << "]" << std::endl;
-		}
-	}
-};
-
 void Example1()
 {
 	cout << "Polymorphism Examples" << endl;
 	cout << "Pointers" << endl;
 
-	Account* p1 = new Account();
-	Account* p2 = new Savings();
-	Account* p3 = new Checking();
-	Account* p4 = new Trust();
+	// Account* p1 = new Account(); // not allowed since it is an abstract class
+	Account* p2 = new Savings_Account();
+	Account* p3 = new Checking_Account();
+	Account* p4 = new Trust_Account();
 
-	Account joe;
-	Savings S_acc{ "Remi", 3000. };
+	// Account joe; // not allowed 
+	Savings_Account S_acc{ "Remi", 3000. };
 
 	cout << "\n ==== Depoist ====" << endl;
-	p1->deposit(5000);
+	p2->deposit(5000);
 	S_acc.deposit(5000);
 
 	cout << "\n ==== Withdraw ====" << endl;
-
-	p1->withdraw(1000);
+	// p1->withdraw(1000);
 	p2->withdraw(1000);
 	p3->withdraw(1000);
 	p4->withdraw(1000);
 	S_acc.withdraw(1000);
 
 	cout << "\n ==== Printing classes ====" << endl;
-
-	cout << *p1 << endl;
+	// cout << *p1 << endl;
 	cout << *p2 << endl;
 	cout << *p3 << endl;
 	cout << *p4 << endl;
 	cout << S_acc << endl;
 
 	cout << "\n ==== Clean up ====" << endl;
-	delete p1;
+	// delete p1;
 	delete p2;
 	delete p3;
 	delete p4;
@@ -372,10 +129,53 @@ void Example2()
 	delete s3;
 }
 
+void Example3()
+{
+	//Account joe; //This won't work
+	/*Checking_Account c;
+	cout << c << endl;
+
+	Savings_Account s{ "Sara", 5000, 2.6 };
+	cout << s << endl;
+	s.deposit(10000);
+	cout << s << endl;
+	s.withdraw(10000);
+	cout << s << endl;*/
+
+	Account* ptr = new Trust_Account("Leo", 10000, 2.6);
+
+	//cout << ptr << endl; // this will show to where the pointer is pointing(memory address)
+	cout << *ptr << endl; // this displays the data at the memory address*/
+
+	Checking_Account Remi{ "Remi", 5000 };
+	cout << Remi << endl;
+
+	Account* trust = new Trust_Account("Adrian");
+	cout << *trust << endl;
+
+	Account* p1 = new Checking_Account("Agatha", 10000);
+	Account* p2 = new Savings_Account("Vignir", 1000);
+	Account* p3 = new Trust_Account("James");
+
+	std::vector<Account*> accounts{ p1,p2,p3 };
+
+	display(accounts);
+	deposit(accounts, 1000);
+	withdraw(accounts, 2000);
+
+	display(accounts);
+
+	delete p1;
+	delete p2;
+	delete p3;
+	delete ptr;
+}
+
 int main()
 {
 	Example1();
-	//Example2();
+	Example2();
+	Example3();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
