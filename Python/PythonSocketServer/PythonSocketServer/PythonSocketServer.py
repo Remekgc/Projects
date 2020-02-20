@@ -1,29 +1,33 @@
-import serial
 import time
 import struct
 import socket
+import select
+import errno
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((socket.gethostname(), 40005))
-s.listen(5)
-print(socket.gethostname())
-connected = True
+s.listen()
+
+host = socket.gethostname();
+print(host)
+print("IP address: " + socket.gethostbyname(host))
+pingspeed = time.time() + 5
 
 while True:
-    connected = True
     clientsocket, address = s.accept()
+
     print(f"Connection from {address} has been established")
     clientsocket.send(bytes("Welcome to the server\n","utf-8"))
 
     
-    while connected:
+    while True:
         try:
-            clientsocket.send(bytes("Twoja stara","utf-8"))
-        except :
-            print("Lost connection")
-            connected = False
-        #line = conn.readline()
-        #line = line.decode("utf-8")
-        #print(line)
-        time.sleep(5)
-    time.sleep(10)
+            data = clientsocket.recv(1024)
+            print(data.decode("utf-8"))
+        except:
+            clientsocket.close;
+            print("Failed to recive messange, client disconected!")
+            break;
+
+s.close();
+
