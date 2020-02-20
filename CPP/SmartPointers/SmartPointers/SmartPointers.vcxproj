@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{794D8DD3-5761-4F88-90A4-3A16227A171B}</ProjectGuid>
+    <ProjectGuid>{6EC59C5F-B050-4A02-B789-E0ACCF8EF5C1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Polymorphism</RootNamespace>
+    <RootNamespace>SmartPointers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,22 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
-    <ClCompile Include="Account_Util.cpp" />
-    <ClCompile Include="Checking_Account.cpp" />
-    <ClCompile Include="I_Printable.cpp" />
-    <ClCompile Include="Polymorphism.cpp" />
-    <ClCompile Include="Savings_Account.cpp" />
-    <ClCompile Include="Trust_Account.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Account.h" />
-    <ClInclude Include="Account_Util.h" />
-    <ClInclude Include="Checking_Account.h" />
-    <ClInclude Include="I_Printable.h" />
-    <ClInclude Include="Polymorphism.h" />
-    <ClInclude Include="Savings_Account.h" />
-    <ClInclude Include="Trust_Account.h" />
+    <ClCompile Include="SmartPointers.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
