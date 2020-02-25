@@ -147,7 +147,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Checking_Account.cpp" />
+    <ClCompile Include="I_Printable.cpp" />
+    <ClCompile Include="Savings_Account.cpp" />
     <ClCompile Include="SmartPointers.cpp" />
+    <ClCompile Include="Trust_Account.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Checking_Account.h" />
+    <ClInclude Include="I_Printable.h" />
+    <ClInclude Include="Savings_Account.h" />
+    <ClInclude Include="Trust_Account.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
