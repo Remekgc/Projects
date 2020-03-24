@@ -8,6 +8,7 @@
 #include "Trust_Account.h"
 #include "Checking_Account.h"
 #include "Savings_Account.h"
+#include "SmartPointers.h"
 
 class Test {
 private:
@@ -21,12 +22,55 @@ public:
 
 using namespace std;
 
+void TestingSmartPointers()
+{
+	Test* t1 = new Test{ 1000 };
+	delete t1;
+	unique_ptr<Test> t2{ new Test{ 100 } };
+	unique_ptr<Test> t3 = make_unique<Test>(1000);
+	unique_ptr<Test> t4;
+	t4 = move(t2);
+	if (!t2)
+	{
+		cout << "t1 is nullptr" << endl;
+	}
+}
+
+void UniquePointers()
+{
+	unique_ptr<Account> a1 = make_unique<Checking_Account>("Jack", 777);
+	cout << *a1 << endl;
+	a1->deposit(7000);
+	cout << *a1 << endl;
+
+	vector<unique_ptr<Account>> accounts;
+
+	accounts.push_back(make_unique<Checking_Account>("Jace", 1000));
+	accounts.push_back(make_unique<Savings_Account>("Victor", 5000, 6.2));
+	accounts.push_back(make_unique<Trust_Account>("Jacob", 19000, 4.7));
+
+	for (const auto& acc : accounts) {
+		cout << *acc << endl;
+	}
+}
+
+void SharedPointers() {
+	shared_ptr<int> p1{ new int{100} };
+	cout << "Use count: " << p1.use_count() << endl;
+
+	shared_ptr<int> p2{ p1 }; // Shared ownership
+	cout << "Use count: " << p1.use_count() << endl;
+
+	p1.reset(); // decrement the use_count; p1 is nulled out
+	cout << "Use count: " << p1.use_count() << endl;
+	cout << "Use count: " << p2.use_count() << endl;
+}
+
 int main()
 {
-	Test *t1 = new Test { 1000 };
-	delete t1;
-	unique_ptr<Test> t2{ new Test{100} };
-	std::unique_ptr<Test> t3 = make_unique<Test>(1000);
+	//TestingSmartPointers();
+	//UniquePointers();
+	SharedPointers();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
