@@ -10,6 +10,8 @@
 #include "Savings_Account.h"
 #include "SmartPointers.h"
 
+using namespace std;
+
 class Test {
 private:
 	int data;
@@ -20,10 +22,15 @@ public:
 	~Test() { std::cout << "Test destructor(" << data << ")" << std::endl; }
 };
 
-using namespace std;
+void my_deleter(Test* ptr) {
+	cout << "\tUsing my custom function deleter" << endl;
+	delete ptr;
+}
 
 void TestingSmartPointers()
 {
+	cout << "\nTesting Smart Pointers\n" << endl;
+
 	Test* t1 = new Test{ 1000 };
 	delete t1;
 	unique_ptr<Test> t2{ new Test{ 100 } };
@@ -38,6 +45,8 @@ void TestingSmartPointers()
 
 void UniquePointers()
 {
+	cout << "\nUnique Pointers\n" << endl;
+
 	unique_ptr<Account> a1 = make_unique<Checking_Account>("Jack", 777);
 	cout << *a1 << endl;
 	a1->deposit(7000);
@@ -55,6 +64,8 @@ void UniquePointers()
 }
 
 void SharedPointers() {
+	cout << "\nShared Pointers\n" << endl;
+
 	shared_ptr<int> p1{ new int{100} };
 	cout << "Use count: " << p1.use_count() << endl;
 
@@ -66,11 +77,65 @@ void SharedPointers() {
 	cout << "Use count: " << p2.use_count() << endl;
 }
 
+void CustomDeleter() {
+	cout << "\nCustom Deleters\n" << endl;
+
+	{
+		// Using a funtion
+		shared_ptr<Test> ptr1{ new Test{100}, my_deleter };
+	}
+
+	cout << "=======================================================" << endl;
+	{
+		// Using Lambda expression
+		shared_ptr<Test> ptr2(new Test{ 1000 },
+			[](Test* ptr) {
+				cout << "\tUsing my custom lambda delter" << endl;
+				delete ptr;
+			});
+	}
+}
+
+auto make() {
+	return make_unique<vector<shared_ptr<Test>>>();
+}
+
+void fill(vector<shared_ptr<Test>>& vec, int num) {
+	int temp;
+	for (int i = 0; i < num; i++) {
+		cout << "Enter data point [" << i + 1 << "] : ";
+		cin >> temp;
+		vec.push_back(make_shared<Test>(temp));
+	}
+}
+
+void display(const vector<shared_ptr<Test>>& vec) {
+	cout << "Displaying vector data" << endl;
+	cout << "=================================" << endl;
+	for (const auto& item : vec) {
+		cout << item->get_data() << endl;
+	}
+	cout << "=================================" << endl;
+}
+
+void PlayingWithPointers() {
+	cout << "\nPlaying with Pointers\n" << endl;
+
+	unique_ptr<vector<shared_ptr<Test>>> vec_ptr;
+	vec_ptr = make();
+	cout << "How many data points do you want to enter?:";
+	int num; cin >> num;
+	fill(*vec_ptr, num);
+	display(*vec_ptr);
+}
+
 int main()
 {
-	//TestingSmartPointers();
-	//UniquePointers();
+	TestingSmartPointers();
+	UniquePointers();
 	SharedPointers();
+	CustomDeleter();
+	PlayingWithPointers();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
