@@ -7,16 +7,13 @@ public class LoadNextLevel : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 2f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Invoke("LoadLevel", levelLoadDelay);
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Invoke("LoadLevel", levelLoadDelay);
+        }
     }
 
     private void LoadLevel()

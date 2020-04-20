@@ -1,30 +1,42 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float speed = 20f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
+    [SerializeField] ParticleSystem[] guns;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -10f;
+
+    [Header("Control-throw Based")]
     [SerializeField] float positionYawFactor = 5f;
     [SerializeField] float controlRollFactor = -10f;
 
     float xThrow, yThrow;
-
-    void Start()
-    {
-        
-    }
+    bool ControllsEnabled = true;
 
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (ControllsEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+            ProcessFiring();
+        }
+    }
+
+    void OnPlayerDeath() // Called by string reference
+    {
+        print("Controls frozen. player dead");
+        ControllsEnabled = false;
     }
 
     private void ProcessRotation()
@@ -55,5 +67,27 @@ public class Player : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            UpdateGunState(true);
+        }
+        else
+        {
+            UpdateGunState(false);
+        }
+    }
+
+    private void UpdateGunState(bool state)
+    {
+        foreach (ParticleSystem gun in guns)
+        {
+            var particles = gun.emission;
+            particles.enabled = state;
+
+        }
     }
 }
