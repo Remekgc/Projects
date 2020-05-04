@@ -35,8 +35,9 @@ public class CubeEditor : MonoBehaviour
     private void UpdateLabel()
     {
         float x = transform.position.x / 10;
+        float y = transform.position.y / 10;
         float z = transform.position.z / 10;
         GetComponentInChildren<TextMesh>().text = x + "," + z;
-        gameObject.name = x + "," + z;
+        gameObject.name = "(" + x + "," + y + "," + z + ")";
     }
 }

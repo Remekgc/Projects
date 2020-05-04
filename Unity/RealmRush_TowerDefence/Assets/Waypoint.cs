@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
+    // ok to be public as is data class
+    public bool isExplored = false;
+    public Waypoint exploredFrom;
+
     [Tooltip("Size of the grid that the object will snap into")] [SerializeField] [Range(1, 20)] int gridSize = 10;
 
     public int GetGridSize()
