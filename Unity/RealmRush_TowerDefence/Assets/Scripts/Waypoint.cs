@@ -6,10 +6,33 @@ public class Waypoint : MonoBehaviour
 {
     // ok to be public as is data class
     public bool isExplored = false;
-    public bool isExludedFromPathfinding = false;
+    public bool isPleaceble = true;
     public Waypoint exploredFrom;
 
+    [SerializeField] private protected TowerFactory towerFactory;
+
     [Tooltip("Size of the grid that the object will snap into")] [SerializeField] [Range(1, 20)] int gridSize = 10;
+
+    void Awake()
+    {
+        towerFactory = FindObjectOfType<TowerFactory>();
+    }
+
+    void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (isPleaceble)
+            {
+                towerFactory.SpawnTower(this);
+            }
+            else
+            {
+                print("Can not place tower on this spot.");
+            }
+        }
+    }
 
     public int GetGridSize()
     {

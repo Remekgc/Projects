@@ -5,13 +5,13 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [Header("Tower parts")]
-    [SerializeField] protected internal Transform towerTop;
-    [SerializeField] protected internal ParticleSystem towerGun;
+    [SerializeField] private protected Transform towerTop;
+    [SerializeField] private protected ParticleSystem towerGun;
     ParticleSystem.EmissionModule gun;
 
     [Header("Tower atributes")]
-    [Range(0, 100)] [SerializeField] protected internal int towerRange = 35;
-    [Range(0, 100)] [SerializeField] protected internal int damage = 10;
+    [Range(0, 100)] [SerializeField] private protected int towerRange = 35;
+    [Range(0, 100)] [SerializeField] private protected int damage = 10;
     [SerializeField] bool scanEnabled = true;
 
     [Header("Enemy")]
@@ -20,6 +20,15 @@ public class Tower : MonoBehaviour
     void Awake()
     {
         gun = towerGun.emission;
+        //searchForGroundBlock();
+    }
+
+    private void checkGroundBox()
+    {
+        if (Physics.Raycast(transform.position + new Vector3(0, 0.2f, 0), Vector3.down, out RaycastHit hit, 2, 1 << 9))
+        {
+            hit.collider.gameObject.GetComponent<Waypoint>().isPleaceble = false;
+        }
     }
 
     void Start()
@@ -27,9 +36,18 @@ public class Tower : MonoBehaviour
         InvokeRepeating("EnemyScanner", 1, 1);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         shotTheEnemy();
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a green sphere at the transform's position
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireSphere(transform.position, towerRange);
+        Gizmos.DrawRay(transform.position, new Vector3(0, -towerRange, 0));
     }
 
     private void shotTheEnemy()
@@ -46,13 +64,6 @@ public class Tower : MonoBehaviour
             scanEnabled = true;
         }
 
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, towerRange);
     }
 
     void EnemyScanner()

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Pathfinder pathfinder;
+    [SerializeField] private protected Pathfinder pathfinder;
+    [SerializeField] private protected Enemy enemy;
+    [SerializeField] float movementPeriod = 0.5f;
+
+    void Awake()
+    {
+        pathfinder = FindObjectOfType<Pathfinder>();
+    }
 
     void Start()
     {
@@ -16,8 +23,8 @@ public class EnemyMovement : MonoBehaviour
     {
         foreach (var waypoint in path)
         {
-            transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(movementPeriod);
+            transform.position = waypoint.transform.position + new Vector3(0, 1.5f, 0);
         }
     }
 }

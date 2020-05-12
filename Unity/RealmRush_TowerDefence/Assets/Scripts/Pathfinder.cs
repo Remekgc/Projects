@@ -6,7 +6,7 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     [Tooltip("Start and End Points for the player on the grid")] public Waypoint startPoint, endPoint;
-    [SerializeField] bool isRunning = true; // todo make private
+    [SerializeField] private protected bool isRunning = true;
      
     Dictionary<Vector3Int, Waypoint> grid = new Dictionary<Vector3Int, Waypoint>();
     Queue<Waypoint> waypointQueue = new Queue<Waypoint>();
@@ -111,7 +111,7 @@ public class Pathfinder : MonoBehaviour
             // overlaping blocks?
             bool isOverlaping = grid.ContainsKey(waypoint.GetGridPos());
             // add to dictionary
-            if (isOverlaping || waypoint.isExludedFromPathfinding)
+            if (isOverlaping || !waypoint.isPleaceble)
             {
                 //print("Object not indluded in the navigation grid" + waypoint);
             }
@@ -125,16 +125,23 @@ public class Pathfinder : MonoBehaviour
 
     void CreatePath()
     {
-        path.Add(endPoint);
+        SetAsPath(endPoint);
 
         Waypoint previous = endPoint.exploredFrom;
         while (previous != startPoint)
         {
-            path.Add(previous);
+            SetAsPath(previous);
             previous = previous.exploredFrom;
         }
 
-        path.Add(startPoint);
+        SetAsPath(startPoint);
         path.Reverse();
     }
+
+    private void SetAsPath(Waypoint waypoint)
+    {
+        waypoint.isPleaceble = false;
+        path.Add(waypoint);
+    }
+
 }
