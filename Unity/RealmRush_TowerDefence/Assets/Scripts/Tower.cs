@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     [SerializeField] private protected Transform towerTop;
     [SerializeField] private protected ParticleSystem towerGun;
     ParticleSystem.EmissionModule gun;
+    public Waypoint box;
 
     [Header("Tower atributes")]
     [Range(0, 100)] [SerializeField] private protected int towerRange = 35;

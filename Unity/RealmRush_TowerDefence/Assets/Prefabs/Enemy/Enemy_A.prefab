@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c683e0a5b6395646a940bd6778a3524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBase: {fileID: 0}
   parentObject: {fileID: 991671514221939741}
   hp: 10
   deathEffect: {fileID: 8968830611961751624, guid: 5369bdc86c8b5f240809bd7c6fff4a91,
@@ -367,6 +368,11 @@ PrefabInstance:
     - target: {fileID: 1327519085298939156, guid: 66018d81c62930541a069c1c12c46f73,
         type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327519085298939156, guid: 66018d81c62930541a069c1c12c46f73,
+        type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1327555989049560244, guid: 66018d81c62930541a069c1c12c46f73,

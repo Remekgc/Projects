@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Player components")]
+    [SerializeField] private protected PlayerBase playerBase;
     [Header("Main Parts")]
     [SerializeField] private protected GameObject parentObject;
     [Range(0, 100)] public int hp = 100;
@@ -14,14 +16,20 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
+        playerBase = FindObjectOfType<PlayerBase>();
         parentObject = transform.parent.gameObject;
     }
 
-    void Update()
+    void Start()
     {
-        if(hp <= 0)
+        HealthBasedOnScore();
+    }
+
+    private void HealthBasedOnScore()
+    {
+        if (playerBase.score > 0)
         {
-            DeathSequence();
+            hp += Mathf.RoundToInt(playerBase.score / 10);
         }
     }
 
@@ -40,6 +48,13 @@ public class Enemy : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         hp--;
+
+        if (hp <= 0)
+        {
+            playerBase.AddScore(10);
+            DeathSequence();
+        }
+
         hitEffect.Play();
     }
 
