@@ -9634,8 +9634,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4454358554181973999}
   - component: {fileID: 4708862022691128362}
+  - component: {fileID: -7552352275636907672}
   - component: {fileID: 8459772003484066982}
-  - component: {fileID: 7702597665441263772}
   m_Layer: 0
   m_Name: Goal_Explosion
   m_TagString: Untagged
@@ -14386,6 +14386,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &-7552352275636907672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822282325018270302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b519cb22f78b84f86f9943b5ba3f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!199 &8459772003484066982
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -14450,18 +14462,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7702597665441263772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4822282325018270302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2b519cb22f78b84f86f9943b5ba3f42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5930761613183603586
 GameObject:
   m_ObjectHideFlags: 0

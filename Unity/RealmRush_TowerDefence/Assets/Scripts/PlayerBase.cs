@@ -13,6 +13,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private protected BoxCollider enemyTrigger;
     [SerializeField] private protected TextMeshProUGUI hpTMP;
     [SerializeField] private protected TextMeshProUGUI scoreTMP;
+    [SerializeField] private protected TextMeshProUGUI endTMP;
 
     void Start()
     {
@@ -47,7 +48,19 @@ public class PlayerBase : MonoBehaviour
     {
         baseHealth -= damageAmount;
         UI_UpdateHealth(baseHealth);
+
+        if (baseHealth <= 0)
+        {
+            baseHealth = 0;
+            UI_UpdateHealth(baseHealth);
+            UI_EndTitle();
+        }
     }
 
-
+    private void UI_EndTitle()
+    {
+        endTMP.gameObject.SetActive(true);
+        GameFlow.Instance.PauseGame();
+        GameFlow.Instance.inputActive = false;
+    }
 }

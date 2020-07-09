@@ -27,10 +27,6 @@ public class Waypoint : MonoBehaviour
             {
                 towerFactory.SpawnTower(this);
             }
-            else
-            {
-                print("Can not place tower on this spot.");
-            }
         }
     }
 

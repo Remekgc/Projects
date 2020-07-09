@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private protected ParticleSystem deathEffect;
     [SerializeField] private protected ParticleSystem hitEffect;
     [SerializeField] private protected ParticleSystem goalEffect;
+    [Header("Audio")]
+    [SerializeField] private protected AudioSource audioSource;
+    [SerializeField] private protected List<AudioClip> enemySFX = new List<AudioClip>();
 
     void Awake()
     {
@@ -36,18 +39,21 @@ public class Enemy : MonoBehaviour
     private void DeathSequence()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(enemySFX[1], Camera.main.transform.position);
         Destroy(parentObject);
     }
 
     public void GoalSequence()
     {
         Instantiate(goalEffect, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(enemySFX[2], Camera.main.transform.position);
         Destroy(parentObject);
     }
 
     void OnParticleCollision(GameObject other)
     {
         hp--;
+        audioSource.PlayOneShot(enemySFX[0]);
 
         if (hp <= 0)
         {

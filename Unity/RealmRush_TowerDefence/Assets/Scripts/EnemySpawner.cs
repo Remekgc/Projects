@@ -6,9 +6,11 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<EnemyMovement> enemy = new List<EnemyMovement>();
     [SerializeField] private protected Vector3 spawnPossition;
-    [Header("Spawn rate of the enemies with random number from spawnRateFrom to spwanRateTo")]
+    [Header("Spawn components")]
     [SerializeField] float spawnRateFrom = 1f;
     [SerializeField] float spwanRateTo = 5f;
+    [SerializeField] private protected AudioClip spawnEnemySFX;
+    [SerializeField] private protected AudioSource audioSource;
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             SpawnEnemy(enemy[0]);
+            audioSource.PlayOneShot(spawnEnemySFX);
             yield return new WaitForSeconds(Random.Range(spawnRateFrom, spwanRateTo));
         }
 

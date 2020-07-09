@@ -10,16 +10,19 @@ public class TowerFactory : MonoBehaviour
 
     public void SpawnTower(Waypoint box)
     {
-        if (towers.Count < towerLimit)
+        if (!GameFlow.Instance.paused)
         {
-            Tower tower = Instantiate(towerPrefab, box.transform.position + new Vector3(0, 5, 0), Quaternion.identity, transform);
-            towers.Enqueue(tower);
-            tower.box = box;
-            box.isPleaceble = false;
-        }
-        else
-        {
-            MoveTower(box);
+            if (towers.Count < towerLimit)
+            {
+                Tower tower = Instantiate(towerPrefab, box.transform.position + new Vector3(0, 5, 0), Quaternion.identity, transform);
+                towers.Enqueue(tower);
+                tower.box = box;
+                box.isPleaceble = false;
+            }
+            else
+            {
+                MoveTower(box);
+            }
         }
     }
 
