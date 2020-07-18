@@ -5,13 +5,16 @@ using UnityEngine.AI;
 
 public class CapsuleEnemy_AI : MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    [Header("Main Components")]
+    public GameObject target;
     [SerializeField] float chaseRange = 5f;
 
     NavMeshAgent agent;
+    Animator animator;
     float distanceToTarget = Mathf.Infinity;
 
     public string playerObjectName = "Player";
+
     [Header("States")]
     public bool autoFindPlayer = true;
     public bool isProvoked = false;
@@ -19,9 +22,9 @@ public class CapsuleEnemy_AI : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
     
-    // Start is called before the first frame update
     void Start()
     {
         if (autoFindPlayer)
@@ -30,7 +33,6 @@ public class CapsuleEnemy_AI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -65,11 +67,14 @@ public class CapsuleEnemy_AI : MonoBehaviour
 
     private void ChaseTarget()
     {
+        animator.SetBool("atack", false);
+        animator.SetTrigger("move");
         agent.SetDestination(target.transform.position);
     }
 
     private void AtackTarget()
     {
+        animator.SetBool("atack", true);
         Debug.Log(name + " - Die " + target.name);
     }
 
