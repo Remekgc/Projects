@@ -7,10 +7,14 @@ public abstract class RaycastWeapon : MonoBehaviour
 {
     [SerializeField] protected Camera FPCamera;
     [SerializeField] protected float range = 100f;
-    [SerializeField] protected float damage = 35f;
+    [SerializeField] protected int damage = 35;
     [SerializeField] protected ParticleSystem muzzleFlash;
     [SerializeField] protected GameObject hitEffect;
+    [SerializeField] protected float timeBetweenShots = 0.1f;
+    [SerializeField] protected bool isAuto = false;
 
+    protected Ammo ammo = new Ammo();
+    bool canShoot = true;
 
     void Awake()
     {
@@ -27,16 +31,33 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (isAuto)
         {
-            Shoot();
+            if (Input.GetKey(KeyCode.Mouse0) && Time.timeScale > 0f && canShoot)
+            {
+                StartCoroutine(Shoot());
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale > 0f && canShoot)
+            {
+                StartCoroutine(Shoot());
+            }
         }
     }
 
-    public virtual void Shoot()
+    IEnumerator Shoot()
     {
-        PlayMuzzleFlash();
-        ProcessRaycast();
+        canShoot = false;
+        if (ammo.GetCurrentAmmo() > 0)
+        {
+            PlayMuzzleFlash();
+            ProcessRaycast();
+            ammo.ReduceCurrentAmmo();
+        }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     public virtual void PlayMuzzleFlash()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CapsuleEnemy : BaseStats
 {
-    [SerializeField] float atackDamage = 40f;
+    [SerializeField] int atackDamage = 40;
 
     CapsuleEnemy_AI enemy_AI;
     
@@ -13,7 +13,7 @@ public class CapsuleEnemy : BaseStats
         enemy_AI = GetComponent<CapsuleEnemy_AI>();
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(int amount)
     {
         hitPoints -= amount;
         enemy_AI.isProvoked = true;

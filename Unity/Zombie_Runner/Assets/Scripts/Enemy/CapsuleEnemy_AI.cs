@@ -18,6 +18,7 @@ public class CapsuleEnemy_AI : MonoBehaviour
     [Header("States")]
     public bool autoFindPlayer = true;
     public bool isProvoked = false;
+    public bool isLookingAtTarget = true;
 
     void Awake()
     {
@@ -33,11 +34,6 @@ public class CapsuleEnemy_AI : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
@@ -46,10 +42,21 @@ public class CapsuleEnemy_AI : MonoBehaviour
         {
             isProvoked = true;
             EngageTarget();
+            FaceTarget();
         }
         else
         {
             agent.SetDestination(transform.position);
+        }
+    }
+
+    void FaceTarget()
+    {
+        if (isLookingAtTarget && target != gameObject)
+        {
+            Vector3 direction = (target.transform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
     }
 
@@ -61,7 +68,7 @@ public class CapsuleEnemy_AI : MonoBehaviour
         }
         else if (distanceToTarget <= agent.stoppingDistance)
         {
-            AtackTarget();
+            StartCoroutine(AttackTarget());
         }
     }
 
@@ -72,10 +79,12 @@ public class CapsuleEnemy_AI : MonoBehaviour
         agent.SetDestination(target.transform.position);
     }
 
-    private void AtackTarget()
+    IEnumerator AttackTarget()
     {
         animator.SetBool("atack", true);
-        Debug.Log(name + " - Die " + target.name);
+        isLookingAtTarget = false;
+        yield return new WaitForSeconds(1f);
+        isLookingAtTarget = true;
     }
 
     void OnDrawGizmosSelected()
