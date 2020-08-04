@@ -244,9 +244,10 @@ GameObject:
   - component: {fileID: 1453096651}
   - component: {fileID: 1453096652}
   - component: {fileID: 8426462081673797971}
+  - component: {fileID: 1906570568}
   m_Layer: 0
   m_Name: RigidBodyFPSController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,6 +413,28 @@ MonoBehaviour:
   - {fileID: 177097887}
   - {fileID: 1826150831}
   - {fileID: 5634834733686038586}
+  ammo: {fileID: 1906570568}
+--- !u!114 &1906570568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecc2da09dc8d9848a99c6a00f66e2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 15
+  - ammoType: 1
+    ammoAmount: 30
+  - ammoType: 2
+    ammoAmount: 7
+  - ammoType: 4
+    ammoAmount: 12
 --- !u!1 &2128531674
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,11 +482,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
   range: 100
-  damage: 35
+  damageAmount: 35
   muzzleFlash: {fileID: 8745118114210225227}
   hitEffect: {fileID: 8558788929605479131, guid: f679ab3a5f04f674db1ec72b460a67b8,
     type: 3}
   timeBetweenShots: 0.2
+  isAuto: 1
+  ammo: {fileID: 0}
+  ammoType: 1
 --- !u!114 &5634834733686038586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,11 +504,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
   range: 1000
-  damage: 100
+  damageAmount: 35
   muzzleFlash: {fileID: 8745118112753893640}
   hitEffect: {fileID: 8558788929605479131, guid: f679ab3a5f04f674db1ec72b460a67b8,
     type: 3}
   timeBetweenShots: 1
+  isAuto: 0
+  ammo: {fileID: 0}
+  ammoType: 0
 --- !u!1001 &82420802
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class UI_Controller : MonoBehaviour
     [SerializeField] PlayerStats playerStats;
 
     [SerializeField] bool updateUI = true;
-    [SerializeField] TextMeshProUGUI playerHealthUI;
+    [SerializeField] protected TextMeshProUGUI playerHealthUI;
     [SerializeField] public TextMeshProUGUI gunNameUI;
     [SerializeField] List<GameObject> enableOnDeath = new List<GameObject>();
     [SerializeField] List<GameObject> disableOnDeath = new List<GameObject>();

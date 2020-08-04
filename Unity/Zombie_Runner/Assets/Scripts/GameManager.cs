@@ -25,6 +25,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Game info")]
     public string playerObjectName = "Player";
+    public GameObject player;
+
+    void Start()
+    {
+        if (!player)
+        {
+            player = GameObject.Find(playerObjectName);
+        }
+    }
 
     public void LevelComplete()
     {

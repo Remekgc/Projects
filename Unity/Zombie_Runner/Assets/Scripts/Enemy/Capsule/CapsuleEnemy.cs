@@ -13,10 +13,11 @@ public class CapsuleEnemy : BaseStats
         enemy_AI = GetComponent<CapsuleEnemy_AI>();
     }
 
-    public override void TakeDamage(int amount)
+    public override void TakeDamage(Damage damage)
     {
-        hitPoints -= amount;
+        hitPoints -= damage.amount;
         enemy_AI.isProvoked = true;
+
         if (hitPoints <= 0)
         {
             Die();
@@ -32,7 +33,7 @@ public class CapsuleEnemy : BaseStats
         BaseStats targetStats = enemy_AI.target.GetComponent<BaseStats>();
         if (targetStats)
         {
-            targetStats.TakeDamage(atackDamage);
+            targetStats.TakeDamage(new Damage(atackDamage, gameObject));
         }
         else
         {

@@ -7,18 +7,30 @@ public abstract class RaycastWeapon : MonoBehaviour
 {
     [SerializeField] protected Camera FPCamera;
     [SerializeField] protected float range = 100f;
-    [SerializeField] protected int damage = 35;
+    [SerializeField] protected int damageAmount = 35;
     [SerializeField] protected ParticleSystem muzzleFlash;
     [SerializeField] protected GameObject hitEffect;
     [SerializeField] protected float timeBetweenShots = 0.1f;
     [SerializeField] protected bool isAuto = false;
 
-    protected Ammo ammo = new Ammo();
+    [SerializeField] protected Ammo ammo;
+    [SerializeField] protected AmmoType ammoType;
     bool canShoot = true;
 
     void Awake()
     {
         CheckMainCamera();
+    }
+
+    public virtual void Start()
+    {
+        ammo = GameManager.Instance.player.GetComponent<Inventory>().ammo;
+    }
+
+    void OnEnable()
+    {
+        canShoot = true;
+        Invoke("UpdateWeaponName", 0.1f);
     }
 
     private void CheckMainCamera()
@@ -50,11 +62,11 @@ public abstract class RaycastWeapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (ammo.GetCurrentAmmo() > 0)
+        if (ammo.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
-            ammo.ReduceCurrentAmmo();
+            ammo.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
@@ -74,7 +86,7 @@ public abstract class RaycastWeapon : MonoBehaviour
             BaseStats targetStats = hit.transform.GetComponent<BaseStats>();
             if (targetStats)
             {
-                targetStats.TakeDamage(damage);
+                targetStats.TakeDamage(new Damage(damageAmount, gameObject));
             }
         }
     }
@@ -84,4 +96,10 @@ public abstract class RaycastWeapon : MonoBehaviour
         GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(impact, 0.3f);
     }
+
+    void UpdateWeaponName()
+    {
+        GameManager.Instance.UI_controller.UpdateGun(this);
+    }
+
 }

@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] RaycastWeapon activeWeapon;
+    public RaycastWeapon activeWeapon;
 
-    [SerializeField] List<RaycastWeapon> weapons = new List<RaycastWeapon>();
+    public List<RaycastWeapon> weapons = new List<RaycastWeapon>();
+    public Ammo ammo;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // Input.GetAxis("Mouse ScrollWheel"); for scroll weapon switch
         {
             if (weapons[0])
             {
