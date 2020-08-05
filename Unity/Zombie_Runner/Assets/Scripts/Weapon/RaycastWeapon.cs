@@ -19,6 +19,7 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     void Awake()
     {
+        ammo = new Ammo();
         CheckMainCamera();
     }
 
