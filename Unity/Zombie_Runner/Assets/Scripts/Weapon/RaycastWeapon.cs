@@ -19,7 +19,6 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     void Awake()
     {
-        ammo = new Ammo();
         CheckMainCamera();
     }
 
@@ -101,6 +100,11 @@ public abstract class RaycastWeapon : MonoBehaviour
     void UpdateWeaponName()
     {
         GameManager.Instance.UI_controller.UpdateGun(this);
+    }
+
+    public AmmoType getAmmoType() 
+    { 
+        return ammoType;
     }
 
 }

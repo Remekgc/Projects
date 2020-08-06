@@ -6,10 +6,14 @@ using UnityEngine;
 public class UI_Controller : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
+    [SerializeField] Animator animatorUI;
 
     [SerializeField] bool updateUI = true;
     [SerializeField] protected TextMeshProUGUI playerHealthUI;
-    [SerializeField] public TextMeshProUGUI gunNameUI;
+    public TextMeshProUGUI gunNameUI;
+    public TextMeshProUGUI ammoUI;
+    public TextMeshProUGUI killsUI;
+    public TextMeshProUGUI warningUI;
     [SerializeField] List<GameObject> enableOnDeath = new List<GameObject>();
     [SerializeField] List<GameObject> disableOnDeath = new List<GameObject>();
     [SerializeField] List<GameObject> onPause = new List<GameObject>();
@@ -19,11 +23,12 @@ public class UI_Controller : MonoBehaviour
 
     void Awake()
     {
-        playerStats = FindObjectOfType<PlayerStats>();
+        if (!animatorUI) animatorUI = GetComponent<Animator>();
     }
 
     void Start()
     {
+        if (!playerStats) playerStats = FindObjectOfType<PlayerStats>();
         GameManager.Instance.UI_controller = this;
     }
 
@@ -43,9 +48,14 @@ public class UI_Controller : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (updateUI)
+        if (updateUI && playerStats)
         {
             playerHealthUI.text = playerStats.hitPoints.ToString();
+            UpdateAmmo();
+        }
+        else if (!playerStats)
+        {
+            playerStats = GameManager.Instance.player.GetComponent<PlayerStats>();
         }
     }
 
@@ -97,6 +107,26 @@ public class UI_Controller : MonoBehaviour
     public void UpdateGun(RaycastWeapon raycastWeapon)
     {
         gunNameUI.text = raycastWeapon.name;
+    }
+
+    public void UpdateAmmo()
+    {
+        ammoUI.text = playerStats.inventory.ammo.GetCurrentAmmo(playerStats.inventory.activeWeapon.getAmmoType()).ToString();
+    }
+
+    public void UpdateKills()
+    {
+        killsUI.text = (int.Parse(killsUI.text) + 1).ToString();
+    }
+
+    public void PlayDamagedAnimation()
+    {
+        animatorUI.SetTrigger("damaged");
+    }
+
+    public void ToggleWarning(bool enabled)
+    {
+        warningUI.gameObject.SetActive(enabled);
     }
 
 }

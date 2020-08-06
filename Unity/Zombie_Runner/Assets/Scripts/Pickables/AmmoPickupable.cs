@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
-public class AmmoPickupable : MonoBehaviour
+public class AmmoPickupable : Pickable
 {
     public AmmoType ammoType;
-    public int ammoAmount = 15;
+
+    void Awake()
+    {
+        GetComponent<BoxCollider>().isTrigger = true;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,7 +20,7 @@ public class AmmoPickupable : MonoBehaviour
 
             if (inventory)
             {
-                inventory.ammo.AddAmmo(ammoAmount, ammoType);
+                inventory.ammo.AddAmmo(amount, ammoType);
             }
             Destroy(gameObject);
         }

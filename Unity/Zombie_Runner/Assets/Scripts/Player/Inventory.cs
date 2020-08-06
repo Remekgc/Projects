@@ -9,8 +9,14 @@ public class Inventory : MonoBehaviour
 
     public List<RaycastWeapon> weapons = new List<RaycastWeapon>();
     public Ammo ammo;
+    public FlashLight flashLight;
 
     void Update()
+    {
+        WeaponInput();
+    }
+
+    private void WeaponInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) // Input.GetAxis("Mouse ScrollWheel"); for scroll weapon switch
         {

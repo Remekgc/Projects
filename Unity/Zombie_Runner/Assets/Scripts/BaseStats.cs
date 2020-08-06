@@ -5,19 +5,25 @@ using UnityEngine;
 public abstract class BaseStats : MonoBehaviour
 {
     public int hitPoints = 100;
+    public bool isAlive = true;
 
     public virtual void TakeDamage(Damage damage)
     {
-        hitPoints -= damage.amount;
-        if (hitPoints <= 0)
+        if (isAlive)
         {
-            hitPoints = 0;
-            Die();
+            hitPoints -= damage.amount;
+            if (hitPoints <= 0)
+            {
+                hitPoints = 0;
+                Die();
+            }
         }
+
     }
 
     public virtual void Die()
     {
+        isAlive = false;
         Destroy(gameObject);
     }
 }

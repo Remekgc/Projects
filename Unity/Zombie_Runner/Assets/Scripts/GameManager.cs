@@ -6,16 +6,13 @@ public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Script")]
     public static GameManager Instance;
+
     void Awake()
     {
-        if (Instance)
-        {
-            Destroy(gameObject);
-        }
+        if (Instance && Instance != this) Destroy(gameObject);
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -29,10 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (!player)
-        {
-            player = GameObject.Find(playerObjectName);
-        }
+        if (!player) player = GameObject.Find(playerObjectName);
     }
 
     public void LevelComplete()

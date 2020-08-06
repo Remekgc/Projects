@@ -14,9 +14,13 @@ public abstract class Enemy_AI : MonoBehaviour
     [SerializeField] float distanceToTarget = Mathf.Infinity;
     public bool isLookingAtTarget = false;
 
-    void Awake()
+    protected virtual void Awake()
     {
         if (!agent) { agent = GetComponent<NavMeshAgent>(); }
+    }
+
+    protected virtual void Start() {
+        //do something here
     }
 
     protected virtual void OnEnable()
@@ -24,17 +28,21 @@ public abstract class Enemy_AI : MonoBehaviour
         StartCoroutine(CalculateDistanceToTheTarget());
     }
 
-    void Update()
+    protected virtual void Update()
     {
         FaceTarget();
-        if (!agent.isStopped){ agent.SetDestination(target.transform.position); }
+    }
+
+    public void SetDestination(Transform target)
+    {
+        agent.SetDestination(target.position);
     }
 
     IEnumerator CalculateDistanceToTheTarget()
     {
         while (true)
         {
-            if (target) { distanceToTarget = Vector3.Distance(target.transform.position, transform.position); }
+            if (target && target != gameObject) distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
             else { distanceToTarget = Mathf.Infinity; }
         
             yield return new WaitForSeconds(0.1f);
@@ -60,6 +68,8 @@ public abstract class Enemy_AI : MonoBehaviour
     {
         this.target = target;
         agent.isStopped = false;
+        print(agent.isStopped);
+        print(agent.pathStatus);
         agent.SetDestination(target.transform.position);
     }
 

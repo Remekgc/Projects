@@ -620,7 +620,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.15
-  m_Speed: 1
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -661,12 +661,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  isAlive: 1
   animator: {fileID: 0}
   damage: 20
-  atackSpeed: 2
+  attackSpeed: 1
   atackRange: 1.6
   chaseRange: 20
-  autoFindPlayer: 1
+  dropItems:
+  - {fileID: 6095132300961932632, guid: 3c6b0584a007f8843afb03037c3e6e22, type: 3}
+  - {fileID: 8076686165198085919, guid: fca372a19e08e584380469d7fa1e14bd, type: 3}
+  - {fileID: 5215640646052663118, guid: 07ed7117b9dbf1f439b31b1cb0b145e6, type: 3}
+  - {fileID: 7722025909016683498, guid: de9fd9f8d10253e439e7b133f35c4b90, type: 3}
+  autoEngagePlayer: 1
   isProvoked: 0
 --- !u!1 &4407757273441749145
 GameObject:
