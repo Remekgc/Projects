@@ -27,6 +27,7 @@ namespace AI_Astar
                 {
                     graph.AddNode(wp);
                 }
+
                 foreach(Link l in links)
                 {
                     graph.AddEdge(l.node1, l.node2);
@@ -35,7 +36,6 @@ namespace AI_Astar
                     {
                         graph.AddEdge(l.node2, l.node1);
                     }
-
                 }
             }
         }

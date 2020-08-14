@@ -18,9 +18,14 @@ namespace AI_Astar
 
         void Start()
         {
+            if (!wpManager) wpManager = FindObjectOfType<WaypointManager>();
+
             wps = wpManager.waypoints;
             g = wpManager.graph;
             currentNode = wps[0];
+
+            print(wps.Length);
+            print(g.getPathLength());
         }
 
         public void GoToHeli()
@@ -31,22 +36,31 @@ namespace AI_Astar
 
         public void GoToRuin()
         {
-            g.AStar(currentNode, wps[6]);
+            g.AStar(currentNode, wps[3]);
             currentWP = 0;
         }
 
-        // Update is called once per frame
+        public void GoToFactory()
+        {
+            g.AStar(currentNode, wps[5]);
+            currentWP = 0;
+        }
+
         void LateUpdate()
         {
-            if (g.getPathLength() == 0 || currentWP == g.getPathLength()) 
-                return;
-            
+            if (g.getPathLength() == 0 || currentWP == g.getPathLength())
+            {
+                return; //Do nothing if there is no path
+            }
+
             //the node we are closest to at this moment
             currentNode = g.getPathPoint(currentWP);
             
             //if we are close enough to the current waypoioint move to next
             if (Vector3.Distance(g.getPathPoint(currentWP).transform.position, transform.position) < accuracy)
+            {
                 currentWP++;
+            }
 
             // if we are not at hte end of the path
             if (currentWP < g.getPathLength())
@@ -56,6 +70,7 @@ namespace AI_Astar
                 Vector3 direction = lookAtGoal - transform.position;
 
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotSpeed);
+                transform.Translate(0, 0, speed * Time.deltaTime);
             }
         }
     }
