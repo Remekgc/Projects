@@ -1,24 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public sealed class GameEnvironment
 {
-    private static GameEnvironment _instance;
-    private List<GameObject> _checkpoints = new List<GameObject>();
-    public List<GameObject> checkpoints { get {return _checkpoints; } }
+    private static GameEnvironment instance;
+
+    public List<GameObject> CheckPoints { get; private set; } = new List<GameObject>();
+    public GameObject SafeZone { get; private set; }
 
     public static GameEnvironment Instance
     {
         get
         {
-            if (_instance == null)
+            if (instance == null)
             {
-                _instance = new GameEnvironment();
-                _instance.checkpoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
+                instance = new GameEnvironment();
+                instance.CheckPoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
+                instance.SafeZone = GameObject.FindGameObjectWithTag("SafeZone");
+                instance.CheckPoints = instance.CheckPoints.OrderBy(waypoint => waypoint.name).ToList();
+                instance.print("Instance created");
             }
-            return _instance;
+            return instance;
         }
+    }
+
+    public void print(params object[] args)
+    {
+        string text = string.Empty;
+
+        foreach (var item in args)
+        {
+            text += item.ToString();
+        }
+
+        Debug.Log(text);
     }
 
 }
