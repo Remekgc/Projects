@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-namespace AI_WaypointsAndGraphs
+namespace AI_Examples.WaypointsAndGraphs
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class AgentFollowPath : MonoBehaviour

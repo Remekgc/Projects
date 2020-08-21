@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AI_Physics 
+namespace AI_Examples.AI_Physics
 {
     public class Shell : MonoBehaviour
     {

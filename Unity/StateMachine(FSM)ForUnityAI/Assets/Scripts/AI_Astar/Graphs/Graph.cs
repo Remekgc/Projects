@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace AI_Astar
+namespace AI_Examples.AI_Astar
 {
 	public class Graph
 	{

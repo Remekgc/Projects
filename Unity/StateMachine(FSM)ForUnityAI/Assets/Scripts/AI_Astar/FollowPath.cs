@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AI_Astar
+namespace AI_Examples.AI_Astar
 {
     public class FollowPath : MonoBehaviour
     {

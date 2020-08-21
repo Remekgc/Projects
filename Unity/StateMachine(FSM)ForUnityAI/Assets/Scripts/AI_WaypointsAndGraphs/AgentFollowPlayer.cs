@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace AI_WaypointsAndGraphs
+namespace AI_Examples.WaypointsAndGraphs
 {
     public class AgentFollowPlayer : MonoBehaviour
     {

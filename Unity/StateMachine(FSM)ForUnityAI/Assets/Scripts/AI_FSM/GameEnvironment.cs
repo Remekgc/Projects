@@ -3,39 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public sealed class GameEnvironment
+namespace AI_Examples.FSM
 {
-    private static GameEnvironment instance;
-
-    public List<GameObject> CheckPoints { get; private set; } = new List<GameObject>();
-    public GameObject SafeZone { get; private set; }
-
-    public static GameEnvironment Instance
+    public sealed class GameEnvironment
     {
-        get
+        private static GameEnvironment instance;
+
+        public List<GameObject> CheckPoints { get; private set; } = new List<GameObject>();
+        public GameObject SafeZone { get; private set; }
+
+        public static GameEnvironment Instance
         {
-            if (instance == null)
+            get
             {
-                instance = new GameEnvironment();
-                instance.CheckPoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
-                instance.SafeZone = GameObject.FindGameObjectWithTag("SafeZone");
-                instance.CheckPoints = instance.CheckPoints.OrderBy(waypoint => waypoint.name).ToList();
-                instance.print("Instance created");
+                if (instance == null)
+                {
+                    instance = new GameEnvironment();
+                    instance.CheckPoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
+                    instance.SafeZone = GameObject.FindGameObjectWithTag("SafeZone");
+                    instance.CheckPoints = instance.CheckPoints.OrderBy(waypoint => waypoint.name).ToList();
+                    instance.print("Instance created");
+                }
+                return instance;
             }
-            return instance;
         }
-    }
 
-    public void print(params object[] args)
-    {
-        string text = string.Empty;
-
-        foreach (var item in args)
+        public void print(params object[] args)
         {
-            text += item.ToString();
+            string text = string.Empty;
+
+            foreach (var item in args)
+            {
+                text += item.ToString();
+            }
+
+            Debug.Log(text);
         }
 
-        Debug.Log(text);
     }
-
 }
+

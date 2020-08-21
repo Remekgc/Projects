@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace AI_Astar
+namespace AI_Examples.AI_Astar
 {
 	public class Edge
 	{

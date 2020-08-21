@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System;
 
 // A very simplistic car driving on the x-z plane.
-namespace AI_Math
+namespace AI_Examples.AI_Math
 {
     public class Drive : MonoBehaviour
     {

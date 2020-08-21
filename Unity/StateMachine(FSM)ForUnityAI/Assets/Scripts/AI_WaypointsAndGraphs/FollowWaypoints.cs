@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AI_WaypointsAndGraphs 
+namespace AI_Examples.WaypointsAndGraphs
 {
     public class FollowWaypoints : MonoBehaviour
     {
