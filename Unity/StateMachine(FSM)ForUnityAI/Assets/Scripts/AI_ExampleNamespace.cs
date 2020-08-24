@@ -6,4 +6,5 @@
     namespace AI_Math { }
     namespace AI_Physics { }
     namespace WaypointsAndGraphs { }
+    namespace CrowdSimulation { }
 }
