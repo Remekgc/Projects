@@ -7,4 +7,5 @@
     namespace AI_Physics { }
     namespace WaypointsAndGraphs { }
     namespace CrowdSimulation { }
+    namespace GOAP { }
 }

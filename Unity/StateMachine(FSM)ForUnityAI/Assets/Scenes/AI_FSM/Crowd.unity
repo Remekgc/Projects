@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.47610298, g: 0.47610298, b: 0.5441177, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -423,6 +423,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &14432043
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1560,6 +1561,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &109143477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1617,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &109882772 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 56b0baa3aaae042b6aff80aa8e7cc807,
@@ -2932,6 +2935,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &200268714
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3043,6 +3047,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &208325749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4236,7 +4241,7 @@ MonoBehaviour:
   antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 1
-    sharpness: 3
+    sharpness: 0.3
     stationaryBlending: 0.75
     motionBlending: 0.8
   subpixelMorphologicalAntialiasing:
@@ -5315,6 +5320,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &365510709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,6 +5410,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &373375668
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5896,6 +5903,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &414233986
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6730,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &456913481
 GameObject:
   m_ObjectHideFlags: 0
@@ -7007,6 +7016,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &487123676
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7223,6 +7233,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &490614445 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: e414cffd20d1c4c9387b91a1d2b20ddf,
@@ -7791,6 +7802,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &515808581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8532,6 +8544,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1001 &549336193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8834,6 +8847,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &558814938
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9318,6 +9332,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &582624793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 28b9d4414d24c4fddb2bdbdae494d017,
@@ -9342,6 +9357,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &582624795
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9858,6 +9874,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &610247780
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10093,6 +10110,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &613698945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10250,6 +10268,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &614105126
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10860,6 +10879,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &672689616
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11018,6 +11038,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &682564169
 Animator:
   serializedVersion: 3
@@ -11414,6 +11435,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &718944804
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11922,6 +11944,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &768213996 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 7d775aa96cfc246c9b8ce7029a885938,
@@ -12863,6 +12886,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &860907920
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13120,6 +13144,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &864239329
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13695,6 +13720,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &911270111
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14317,6 +14343,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &939242168
 Animator:
   serializedVersion: 3
@@ -14606,6 +14633,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &950230523
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14840,6 +14868,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &965155433
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15750,6 +15779,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1020806873
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17301,6 +17331,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1148875535
 GameObject:
   m_ObjectHideFlags: 0
@@ -17919,6 +17950,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1210996682
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18110,6 +18142,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1222005719
 GameObject:
   m_ObjectHideFlags: 0
@@ -18359,6 +18392,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1234252769
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18496,6 +18530,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1251123047
 GameObject:
   m_ObjectHideFlags: 0
@@ -18771,6 +18806,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1266867218
 GameObject:
   m_ObjectHideFlags: 0
@@ -19392,6 +19428,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1350345037
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19507,6 +19544,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1352732053
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20496,6 +20534,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &1421764838 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 76101ab1057434476a8453baaeadd4a2,
@@ -20603,6 +20642,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &1423706744 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: d7ff0367464744cceabbcfbc93030ccc,
@@ -20824,6 +20864,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1441592257
 GameObject:
   m_ObjectHideFlags: 0
@@ -21159,6 +21200,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1464073827
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -22058,6 +22100,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1564371966
 GameObject:
   m_ObjectHideFlags: 0
@@ -22295,6 +22338,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1583733833
 GameObject:
   m_ObjectHideFlags: 0
@@ -24515,6 +24559,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1610145648
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24660,6 +24705,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1616973730
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24896,6 +24942,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1632070460
 GameObject:
   m_ObjectHideFlags: 0
@@ -25738,6 +25785,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &1675416205
 Animator:
   serializedVersion: 3
@@ -26468,6 +26516,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1732114573
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26672,6 +26721,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1001 &1738636914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26755,6 +26805,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1738636918
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27154,6 +27205,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1757465017
 GameObject:
   m_ObjectHideFlags: 0
@@ -27551,6 +27603,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1772389573
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -28826,6 +28879,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &1908408834
 GameObject:
   m_ObjectHideFlags: 0
@@ -29378,6 +29432,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1932744052
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29670,6 +29725,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &1948712465
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30373,6 +30429,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &2007258063
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30724,6 +30781,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &2028439155
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30831,6 +30889,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &2038871525 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 99bbb97e7b9c34ae6bd8c3fc34dbc6f0,
@@ -31227,6 +31286,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!95 &2069061488
 Animator:
   serializedVersion: 3
@@ -31397,6 +31457,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &2079509040
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31584,6 +31645,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &2096666187
 GameObject:
   m_ObjectHideFlags: 0
@@ -31924,6 +31986,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!1 &2110747790
 GameObject:
   m_ObjectHideFlags: 0
@@ -32304,6 +32367,7 @@ MonoBehaviour:
   walkingSpeedMultiplier: 0
   detectionRadius: 10
   fleeRadius: 20
+  panic: 0
 --- !u!195 &2144577552
 NavMeshAgent:
   m_ObjectHideFlags: 0
