@@ -3,7 +3,7 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(AgentVisualize))]
+[CustomEditor(typeof(GOAP_AgentVisualize))]
 [CanEditMultipleObjects]
 public class GOAP_AgentVisualEditor : Editor
 {
@@ -17,7 +17,7 @@ public class GOAP_AgentVisualEditor : Editor
         DrawDefaultInspector();
         serializedObject.Update();
 
-        AgentVisualize agent = (AgentVisualize)target;
+        GOAP_AgentVisualize agent = (GOAP_AgentVisualize)target;
 
         GUILayout.Label("Name: " + agent.name);
         GUILayout.Label("Current Action: " + agent.gameObject.GetComponent<GOAP_Agent>().CurrentAction);
