@@ -40,6 +40,12 @@ namespace AI_Examples.FSM
             Debug.Log(text);
         }
 
+        public static dynamic ConvertTo(object value, System.Type type)
+        {
+            value = System.Convert.ChangeType(value, type);
+            return value;
+        }
+
     }
 }
 

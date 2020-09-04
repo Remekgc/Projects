@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6388161181340645955}
   - component: {fileID: 4112616624057335928}
   - component: {fileID: 5547785722723854278}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Mic_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,6 +54,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -89,7 +90,7 @@ GameObject:
   - component: {fileID: 8955510091181375430}
   - component: {fileID: 7906199518825545522}
   - component: {fileID: 7846614270031884495}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube2_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +133,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -167,7 +169,7 @@ GameObject:
   - component: {fileID: 1389776333713723205}
   - component: {fileID: 3742532121949579218}
   - component: {fileID: 111303595699413780}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube5_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,6 +212,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -245,7 +248,7 @@ GameObject:
   - component: {fileID: 6977945936343677774}
   - component: {fileID: 1269806488322621354}
   - component: {fileID: 2905152382960274876}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,6 +293,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -325,7 +329,7 @@ GameObject:
   - component: {fileID: 2472307854426153402}
   - component: {fileID: 6358798019269143545}
   - component: {fileID: 7628969457464086717}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,6 +372,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -403,7 +408,7 @@ GameObject:
   - component: {fileID: 1402629065424749739}
   - component: {fileID: 133160500960607632}
   - component: {fileID: 1125425038848077784}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: StrapLeftBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,6 +451,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -479,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153113464759344507}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: BaseCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +522,7 @@ GameObject:
   - component: {fileID: 4256066754618335865}
   - component: {fileID: 6393136504937234695}
   - component: {fileID: 6216009664934981760}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: StrapRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,6 +565,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -594,7 +601,7 @@ GameObject:
   - component: {fileID: 5584121887839378991}
   - component: {fileID: 3300148463889032128}
   - component: {fileID: 4262646470590660620}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,6 +644,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -672,7 +680,7 @@ GameObject:
   - component: {fileID: 4904869141981266864}
   - component: {fileID: 1152733337298253460}
   - component: {fileID: 3058815814811423291}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: StrapLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,6 +723,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -750,7 +759,7 @@ GameObject:
   - component: {fileID: 3123500947797778421}
   - component: {fileID: 4993101372703398423}
   - component: {fileID: 254545808973302051}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: MouthCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,6 +802,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -828,7 +838,7 @@ GameObject:
   - component: {fileID: 7882874860329171447}
   - component: {fileID: 4600623396005384294}
   - component: {fileID: 4729872821328523975}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: StrapRightBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,6 +881,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -906,7 +917,7 @@ GameObject:
   - component: {fileID: 2170962899189291127}
   - component: {fileID: 7971809805846535895}
   - component: {fileID: 3906809591370013006}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube1_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,6 +960,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -982,7 +994,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177407082141715887}
-  m_Layer: 0
+  - component: {fileID: 1849394589}
+  - component: {fileID: 164878733}
+  - component: {fileID: 3437415701368138422}
+  - component: {fileID: 164878734}
+  - component: {fileID: 164878735}
+  - component: {fileID: 5974969456384840346}
+  m_Layer: 29
   m_Name: Nurse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,6 +1022,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &1849394589
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.11
+  m_BaseOffset: 1.05
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &164878733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dadafa86dc17146a12a1c85826e9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actions: []
+  Inventory:
+    items: []
+  CurrentAction: {fileID: 0}
+--- !u!114 &3437415701368138422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad8d4397350b374aba6d206da30d3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisAgent: {fileID: 164878733}
+--- !u!114 &164878734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd509b8047a46a84da18b73131bd904c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionName: Get patient
+  Cost: 1
+  Target: {fileID: 0}
+  TargetTag: 
+  Duration: 0
+  PreConditions:
+  - key: Waiting
+    value: 1
+  - key: FreeCubicle
+    value: 1
+  AfterEffects:
+  - key: patientPickedup
+    value: 1
+  navMeshAgent: {fileID: 0}
+  Inventory:
+    items: []
+  running: 0
+  resource: {fileID: 0}
+--- !u!114 &164878735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49734340db28cea4f899e40d3bec9697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionName: Go to cubicle
+  Cost: 1
+  Target: {fileID: 0}
+  TargetTag: 
+  Duration: 4
+  PreConditions:
+  - key: patientPickedup
+    value: 0
+  AfterEffects:
+  - key: treatPatient
+    value: 0
+  navMeshAgent: {fileID: 0}
+  Inventory:
+    items: []
+  running: 0
+--- !u!114 &5974969456384840346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942308b426db0034fb64a2387924495d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionName: Action
+  Cost: 1
+  Target: {fileID: 0}
+  TargetTag: Lounge
+  Duration: 5
+  PreConditions:
+  - key: exhausted
+    value: 0
+  AfterEffects:
+  - key: rested
+    value: 0
+  navMeshAgent: {fileID: 0}
+  Inventory:
+    items: []
+  running: 0
 --- !u!1 &2629889911763255196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1168,7 @@ GameObject:
   - component: {fileID: 7032451780476376317}
   - component: {fileID: 6813579929102221898}
   - component: {fileID: 6424386973087795790}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,6 +1211,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1093,7 +1247,7 @@ GameObject:
   - component: {fileID: 2597329101441156200}
   - component: {fileID: 7959599259342743786}
   - component: {fileID: 4570400420838722934}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube2_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,6 +1290,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1171,7 +1326,7 @@ GameObject:
   - component: {fileID: 7547972029351810458}
   - component: {fileID: 5308865135557790819}
   - component: {fileID: 255971936189957488}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube1_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1214,6 +1369,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1247,7 +1403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4198649933001637154}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Specifics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,7 +1439,7 @@ GameObject:
   - component: {fileID: 4491012406187714384}
   - component: {fileID: 9015258955854644968}
   - component: {fileID: 4731252440296664068}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Pocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,6 +1482,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1361,7 +1518,7 @@ GameObject:
   - component: {fileID: 7426342997306014522}
   - component: {fileID: 6825676448908421897}
   - component: {fileID: 7072530220485472278}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube3_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,6 +1561,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1437,7 +1595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526534755035777572}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1474,7 +1632,7 @@ GameObject:
   - component: {fileID: 3357574587228598222}
   - component: {fileID: 8225787694991544684}
   - component: {fileID: 9164958800698041487}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: VerticalStripe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,6 +1675,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1552,7 +1711,7 @@ GameObject:
   - component: {fileID: 4277481032194577833}
   - component: {fileID: 6226725486484273267}
   - component: {fileID: 77739718167196362}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Mic_outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,6 +1754,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1630,7 +1790,7 @@ GameObject:
   - component: {fileID: 4695015970602213768}
   - component: {fileID: 115903326784450872}
   - component: {fileID: 3210364543207194162}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube3_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,6 +1833,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1709,7 +1870,7 @@ GameObject:
   - component: {fileID: 2744233246823178154}
   - component: {fileID: 3552670066926651371}
   - component: {fileID: 5910943902064425676}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1752,6 +1913,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1801,7 +1963,7 @@ GameObject:
   - component: {fileID: 5325878776558621709}
   - component: {fileID: 3609102509583034574}
   - component: {fileID: 5968664882352501437}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1845,6 +2007,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1880,7 +2043,7 @@ GameObject:
   - component: {fileID: 392527760865035222}
   - component: {fileID: 383845021080686809}
   - component: {fileID: 4899343176662946995}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: HorizontalStripe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1923,6 +2086,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1958,7 +2122,7 @@ GameObject:
   - component: {fileID: 4515771744037316986}
   - component: {fileID: 6553674125061739164}
   - component: {fileID: 3622836577906017639}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Tube4_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2001,6 +2165,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2034,7 +2199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924947504531569224}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Stethoscope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
