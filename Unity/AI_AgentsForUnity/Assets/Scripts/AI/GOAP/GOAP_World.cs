@@ -26,6 +26,8 @@ public sealed class GOAP_World
             world.ModifyState("FreeCubicle", cubes.Count);
         }
 
+        Debug.Log("I do exist everywhere you know :D");
+
         Time.timeScale = 5;
     }
 
