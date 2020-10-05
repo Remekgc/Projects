@@ -7,7 +7,7 @@ public class GetTreated : GOAP_Action
     public override bool PrePerform()
     {
         Target = Inventory.FindItemWithTag("Cubicle");
-        navMeshAgent.stoppingDistance = 1.5f;
+        navMeshAgent.stoppingDistance = 2f;
 
         if (Target == null)
         {
