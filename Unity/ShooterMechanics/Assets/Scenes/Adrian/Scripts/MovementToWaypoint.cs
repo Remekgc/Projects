@@ -9,6 +9,7 @@ public class MovementToWaypoint : MonoBehaviour
 
     private float timeToMoveToAnotherWaypoint;
     private int currentWaypoint;
+    private bool makeAllWaypointTimersZero;
 
     [SerializeField]
     private float rotationSpeed = 1f;
@@ -39,7 +40,13 @@ public class MovementToWaypoint : MonoBehaviour
                 playerCamera.transform.rotation = Quaternion.Lerp(playerCamera.rotation, toRotation, rotationSpeed * Time.deltaTime);
             }
             playerCamera.position = Vector3.MoveTowards(playerCamera.position, waypoints[currentWaypoint].transform.position, Time.deltaTime * movementSpeed);
-            timeToMoveToAnotherWaypoint = waypoints[currentWaypoint].GetComponent<Waypoint>().TimeToWait;
+            if (!makeAllWaypointTimersZero)
+            {
+                timeToMoveToAnotherWaypoint = waypoints[currentWaypoint].GetComponent<Waypoint>().TimeToWait;
+            }else
+            {
+                timeToMoveToAnotherWaypoint = 0f;
+            }
         }else
         {
             timeToMoveToAnotherWaypoint -= Time.deltaTime;
@@ -52,5 +59,15 @@ public class MovementToWaypoint : MonoBehaviour
                 currentWaypoint = 0;
             }
         }
+    }
+
+    public void SetWaitTimeOnWaypointToZero()
+    {
+        makeAllWaypointTimersZero = true;
+    }
+
+    public void SetWaitTimeOnWaypointToNormal()
+    {
+        makeAllWaypointTimersZero = false;
     }
 }
