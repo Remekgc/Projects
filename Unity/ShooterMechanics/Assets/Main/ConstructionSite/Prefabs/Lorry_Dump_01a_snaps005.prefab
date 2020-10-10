@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4234232985675485637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8882073149961760514}
+  m_Layer: 0
+  m_Name: Lorry_Dump_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8882073149961760514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234232985675485637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6771630312923856327}
+  - {fileID: 4959454405294145447}
+  - {fileID: 6162867677842965669}
+  - {fileID: 7465523038363474443}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7452955639029537829
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959454405293908871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0cf7f9536e1ad2140b07bdf94a3244e2, type: 3}
+--- !u!64 &7528998280505942987
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162867677843331205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: dccdaaf25b24a0446a213b347628abf5, type: 3}
+--- !u!64 &5173019854753348379
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771630312923357671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 4cadb13d745282942930af012db71b0d, type: 3}
+--- !u!64 &2129652682901718135
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465523038363174443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: ec963f2d706be2c42a5a9af97254c306, type: 3}
+--- !u!1001 &4959454405294007591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8882073149961760514}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_Name
+      value: Lorry_dump_02a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ea31e535cf4fd2429b99d0fa79c1800, type: 3}
+--- !u!1 &4959454405293908871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 3ea31e535cf4fd2429b99d0fa79c1800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4959454405294007591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4959454405294145447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 3ea31e535cf4fd2429b99d0fa79c1800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4959454405294007591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6162867677843365413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8882073149961760514}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_Name
+      value: Lorry_tyre_01a_snaps005 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.584
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b, type: 3}
+--- !u!1 &6162867677843331205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6162867677843365413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6162867677842965669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 6cc1db7b8858c204cb0e4cf32fb12b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6162867677843365413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6771630312923457351
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8882073149961760514}
+    m_Modifications:
+    - target: {fileID: 100000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_Name
+      value: Lorry_dump_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7fd920a9df7c4740b905b644a58dd48, type: 3}
+--- !u!1 &6771630312923357671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d7fd920a9df7c4740b905b644a58dd48,
+    type: 3}
+  m_PrefabInstance: {fileID: 6771630312923457351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6771630312923856327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: d7fd920a9df7c4740b905b644a58dd48,
+    type: 3}
+  m_PrefabInstance: {fileID: 6771630312923457351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7465523038363074699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8882073149961760514}
+    m_Modifications:
+    - target: {fileID: 100000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_Name
+      value: Lorry_sparetyre_mount_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.342
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c89551daedd029249908fcad6278076f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.464
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c89551daedd029249908fcad6278076f, type: 3}
+--- !u!1 &7465523038363174443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c89551daedd029249908fcad6278076f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7465523038363074699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7465523038363474443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: c89551daedd029249908fcad6278076f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7465523038363074699}
+  m_PrefabAsset: {fileID: 0}

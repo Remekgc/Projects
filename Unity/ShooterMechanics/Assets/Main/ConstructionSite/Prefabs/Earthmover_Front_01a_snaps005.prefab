@@ -1,0 +1,663 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &1241331031744845871
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827716207394508157}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b584b28d8222abd4c88db17cdf6ba788, type: 3}
+--- !u!64 &581646634307781192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854344106231599298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b584b28d8222abd4c88db17cdf6ba788, type: 3}
+--- !u!64 &669993740732089424
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858583756315373720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 52d3267aa40023a49b3cc1b159fbfb65, type: 3}
+--- !u!64 &5451971384010609338
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281367639435463532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: a6def2852c6646a4da404f0cf16b9234, type: 3}
+--- !u!1 &5609077223780433329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3136408244839169739}
+  m_Layer: 0
+  m_Name: Earthmover_Body_BladeGroup_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3136408244839169739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609077223780433329}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.46200007, z: 2.635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3858583756315208888}
+  - {fileID: 8627892076286786314}
+  - {fileID: 7612260744813355370}
+  m_Father: {fileID: 6606569874772803200}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7533567977061040645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6606569874772803200}
+  m_Layer: 0
+  m_Name: Earthmover_Front_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6606569874772803200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533567977061040645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8147337990545592482}
+  - {fileID: 5281367639435564876}
+  - {fileID: 3136408244839169739}
+  - {fileID: 1827716207394869597}
+  - {fileID: 3854344106231303394}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &6855178225739961958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612260744813854026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 526508dc58eec7641a3d6d978ac5ab22, type: 3}
+--- !u!64 &8248868455399928455
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147337990545624194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: a6def2852c6646a4da404f0cf16b9234, type: 3}
+--- !u!64 &8120465596604320542
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627892076286879530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 526508dc58eec7641a3d6d978ac5ab22, type: 3}
+--- !u!1001 &1827716207394474973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6606569874772803200}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_TiltCylinder_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.083000064
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.914
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.24318324
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96998036
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -28.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+--- !u!1 &1827716207394508157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0da3a4e6c2c28d0408292781b854ba3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1827716207394474973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1827716207394869597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1827716207394474973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3854344106231699042
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6606569874772803200}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_TiltCylinder_01a_snaps005 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.083000064
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.914
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.24318324
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96998036
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -28.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0da3a4e6c2c28d0408292781b854ba3d, type: 3}
+--- !u!1 &3854344106231599298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0da3a4e6c2c28d0408292781b854ba3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3854344106231699042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3854344106231303394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 0da3a4e6c2c28d0408292781b854ba3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3854344106231699042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3858583756315342392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3136408244839169739}
+    m_Modifications:
+    - target: {fileID: 100000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_Blade_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7f36d3986988bf47878af983073c47d, type: 3}
+--- !u!1 &3858583756315373720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b7f36d3986988bf47878af983073c47d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3858583756315342392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3858583756315208888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: b7f36d3986988bf47878af983073c47d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3858583756315342392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5281367639435431372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6606569874772803200}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_Arm_01a_snaps005 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08626025
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9962727
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+--- !u!1 &5281367639435463532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24,
+    type: 3}
+  m_PrefabInstance: {fileID: 5281367639435431372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5281367639435564876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24,
+    type: 3}
+  m_PrefabInstance: {fileID: 5281367639435431372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7612260744813755370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3136408244839169739}
+    m_Modifications:
+    - target: {fileID: 100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_TiltCylinderPart_01a_snaps005 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.78800005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.042000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.24318324
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96998036
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -28.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+--- !u!1 &7612260744813854026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650,
+    type: 3}
+  m_PrefabInstance: {fileID: 7612260744813755370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7612260744813355370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650,
+    type: 3}
+  m_PrefabInstance: {fileID: 7612260744813755370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8147337990545721890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6606569874772803200}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_Arm_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08626025
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9962727
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24, type: 3}
+--- !u!1 &8147337990545624194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24,
+    type: 3}
+  m_PrefabInstance: {fileID: 8147337990545721890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8147337990545592482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 0609b561fd1488f49bf7bc0a5d3c6b24,
+    type: 3}
+  m_PrefabInstance: {fileID: 8147337990545721890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8627892076286910858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3136408244839169739}
+    m_Modifications:
+    - target: {fileID: 100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_TiltCylinderPart_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.78800005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.042000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.24318324
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96998036
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -28.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650, type: 3}
+--- !u!1 &8627892076286879530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650,
+    type: 3}
+  m_PrefabInstance: {fileID: 8627892076286910858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8627892076286786314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: bd9b3d1890e8a7a4e86aaf5ab6964650,
+    type: 3}
+  m_PrefabInstance: {fileID: 8627892076286910858}
+  m_PrefabAsset: {fileID: 0}

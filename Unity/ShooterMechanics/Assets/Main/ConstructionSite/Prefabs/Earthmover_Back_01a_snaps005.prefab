@@ -1,0 +1,633 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &3818885689945499720
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156231013354215347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 7c568be7fa799c646baf41271e59cdac, type: 3}
+--- !u!1 &156721906888858767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7199719632424733794}
+  m_Layer: 0
+  m_Name: Earthmover_Back_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7199719632424733794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156721906888858767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6746083435396129980}
+  - {fileID: 8539071602872360374}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &8375239550931447867
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624635586677421512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0a7659d1c8d0a194d9aa80d02e27876a, type: 3}
+--- !u!1 &2394393279061097079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8757690329812062333}
+  m_Layer: 0
+  m_Name: Earthmover_Body_RipperGroupB_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8757690329812062333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394393279061097079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.495, z: -1.1630001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4546944026382368889}
+  - {fileID: 7929761020375247314}
+  m_Father: {fileID: 6746083435396129980}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2895045472823427482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8539071602872360374}
+  m_Layer: 0
+  m_Name: Earthmover_Body_RipperPartBGroup_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8539071602872360374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895045472823427482}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.637, z: -2.037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 624635586677713384}
+  - {fileID: 4522205936695636695}
+  m_Father: {fileID: 7199719632424733794}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7253701415681642549
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361013932074778273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 9822e6fc0ac61ca4a9cd696b84947793, type: 3}
+--- !u!64 &4057859631172883116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522205936695144183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0a7659d1c8d0a194d9aa80d02e27876a, type: 3}
+--- !u!64 &1745869446176526568
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546944026382474329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 38f1517f2bfe59c49a18d7fe5d828a40, type: 3}
+--- !u!1 &6756378157493512938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6746083435396129980}
+  m_Layer: 0
+  m_Name: Earthmover_Body_RipperGroup_01a_snaps005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6746083435396129980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756378157493512938}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.656, z: -2.037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 156231013354638227}
+  - {fileID: 3361013932074672769}
+  - {fileID: 8757690329812062333}
+  m_Father: {fileID: 7199719632424733794}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1110374504363599605
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929761020375152114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 76da3b64163f84d4aa00bb2702a6bf5c, type: 3}
+--- !u!1001 &156231013354246419
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6746083435396129980}
+    m_Modifications:
+    - target: {fileID: 100000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_RipperPartA_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19770011
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9802626
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 22.805
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0ef1aac0cda22049904d521ec480127, type: 3}
+--- !u!1 &156231013354215347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c0ef1aac0cda22049904d521ec480127,
+    type: 3}
+  m_PrefabInstance: {fileID: 156231013354246419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &156231013354638227 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: c0ef1aac0cda22049904d521ec480127,
+    type: 3}
+  m_PrefabInstance: {fileID: 156231013354246419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &624635586677322600
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8539071602872360374}
+    m_Modifications:
+    - target: {fileID: 100000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_RipperPartB_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1804934
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9835762
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.797
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+--- !u!1 &624635586677421512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: df0f6135e6712e642a88a61af2e4c90f,
+    type: 3}
+  m_PrefabInstance: {fileID: 624635586677322600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &624635586677713384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f,
+    type: 3}
+  m_PrefabInstance: {fileID: 624635586677322600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3361013932074809345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6746083435396129980}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_RipperCylinderPart_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.47599995
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.55400014
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.46115243
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88732094
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 54.923
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d02c866257535f42a585ce3db506913, type: 3}
+--- !u!1 &3361013932074778273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 3d02c866257535f42a585ce3db506913,
+    type: 3}
+  m_PrefabInstance: {fileID: 3361013932074809345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3361013932074672769 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 3d02c866257535f42a585ce3db506913,
+    type: 3}
+  m_PrefabInstance: {fileID: 3361013932074809345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4522205936695240791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8539071602872360374}
+    m_Modifications:
+    - target: {fileID: 100000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_RipperPartB_01a_snaps005 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1804934
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9835762
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.797
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df0f6135e6712e642a88a61af2e4c90f, type: 3}
+--- !u!1 &4522205936695144183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: df0f6135e6712e642a88a61af2e4c90f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4522205936695240791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4522205936695636695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: df0f6135e6712e642a88a61af2e4c90f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4522205936695240791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4546944026382506745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8757690329812062333}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_Ripper_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c768c5343261cf4a8ce07dce3610eff, type: 3}
+--- !u!1 &4546944026382474329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 9c768c5343261cf4a8ce07dce3610eff,
+    type: 3}
+  m_PrefabInstance: {fileID: 4546944026382506745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4546944026382368889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 9c768c5343261cf4a8ce07dce3610eff,
+    type: 3}
+  m_PrefabInstance: {fileID: 4546944026382506745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7929761020375118674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8757690329812062333}
+    m_Modifications:
+    - target: {fileID: 100000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_Name
+      value: Earthmover_Body_RipperCylinder_01a_snaps005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.783
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.052000046
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.46115243
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88732094
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 54.923
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d21376f5e44104e4bb724eef75492bef, type: 3}
+--- !u!1 &7929761020375152114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d21376f5e44104e4bb724eef75492bef,
+    type: 3}
+  m_PrefabInstance: {fileID: 7929761020375118674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7929761020375247314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: d21376f5e44104e4bb724eef75492bef,
+    type: 3}
+  m_PrefabInstance: {fileID: 7929761020375118674}
+  m_PrefabAsset: {fileID: 0}
