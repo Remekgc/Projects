@@ -338,10 +338,10 @@ MonoBehaviour:
     m_Bits: 256
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 2
+  antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.75
-    sharpness: 0.25
+    sharpness: 0.37
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
@@ -530,7 +530,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  isAlive: 1
   inventory: {fileID: 8065027514286793490}
+  kills: 0
 --- !u!114 &1953565347801709709
 MonoBehaviour:
   m_ObjectHideFlags: 0
