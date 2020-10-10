@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class BaseStats : MonoBehaviour
 {
-    [SerializeField] int hitPoints = 100;
-    [SerializeField] bool isAlive = true;
-    [SerializeField] GameObject decalOnHit;
+    [SerializeField] protected int hitPoints = 100;
+    [SerializeField] protected bool isAlive = true;
+    [SerializeField] protected GameObject decalOnHit;
 
     public int HitPoints => hitPoints; 
     public bool IsAlive => isAlive;
