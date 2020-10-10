@@ -15,15 +15,15 @@ public class MovementToWaypoint : MonoBehaviour
     private float rotationSpeed = 1f;
     [SerializeField]
     private float movementSpeed = 1f;
-    // Start is called before the first frame update
+
     void Start()
     {
+        Time.timeScale = 0;
         currentWaypoint = 0;
         playerCamera = GetComponent<Camera>().transform;
         timeToMoveToAnotherWaypoint = waypoints[currentWaypoint].GetComponent<Waypoint>().TimeToWait;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveToAnotherWaypoint();
@@ -64,10 +64,12 @@ public class MovementToWaypoint : MonoBehaviour
     public void SetWaitTimeOnWaypointToZero()
     {
         makeAllWaypointTimersZero = true;
+        Time.timeScale = 1;
     }
 
     public void SetWaitTimeOnWaypointToNormal()
     {
         makeAllWaypointTimersZero = false;
+        Time.timeScale = 1;
     }
 }
