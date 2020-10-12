@@ -7,6 +7,7 @@ public class UI_Manager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI gameTime;
+    public GameObject MainMenu;
 
     public void UpdateScore(string amount)
     {

@@ -10,7 +10,7 @@ public sealed class GameManager : MonoBehaviour
 
     [SerializeField] Timer timer;
     public Score GameScore = new Score(0);
-    [SerializeField] UI_Manager UI_manager;
+    [SerializeField] UI_Manager UI_manager; 
     [SerializeField] Player player;
 
     public Timer GameTimer => timer;
@@ -42,6 +42,30 @@ public sealed class GameManager : MonoBehaviour
     {
         timer.StartTimer();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && timer.Time > 1f)
+        {
+            UI_manager.MainMenu.SetActive(true);
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
 
 [System.Serializable]
@@ -66,5 +90,4 @@ public struct Score
 
         if (this.amount < 0) this.amount = 0;
     }
-    
 }
