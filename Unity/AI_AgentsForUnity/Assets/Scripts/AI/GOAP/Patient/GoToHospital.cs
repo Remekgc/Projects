@@ -6,6 +6,9 @@ public class GoToHospital : GOAP_Action
 {
     public override bool PrePerform()
     {
+        Target = GameObject.FindGameObjectWithTag("Door");
+        Debug.Log(Target.name);
+
         return true;
     }
 
