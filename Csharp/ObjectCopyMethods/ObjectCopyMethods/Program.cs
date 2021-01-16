@@ -83,6 +83,23 @@ namespace ObjectCopyMethods
                 Console.WriteLine(person);
             }
 
+            List<int> numbers = new List<int>() { 1, 2, 3 };
+            List<int> copyOfNumbers = new List<int>(numbers);
+
+            numbers[1] = 5;
+
+            Console.WriteLine("\n -- Numbers --");
+            foreach (int number in numbers)
+            {
+                Console.Write(number + " ");
+            }
+
+            Console.WriteLine("\n -- Copy of numbers --");
+            foreach (int number in copyOfNumbers)
+            {
+                Console.Write(number + " ");
+            }
+
             Console.ReadKey();
         }
     }
