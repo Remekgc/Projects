@@ -5,7 +5,7 @@ import select
 import errno
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((socket.gethostname(), 40005))
+s.bind((socket.gethostname(), 9500))
 s.listen()
 
 host = socket.gethostname();

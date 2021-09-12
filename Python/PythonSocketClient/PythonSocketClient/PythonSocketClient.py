@@ -5,7 +5,7 @@ import errno
 HEADER_LENGTH = 10
 
 IP = socket.gethostname()
-PORT = 40005
+PORT = 9500
 my_username = input("Username: ")
 
 # Create a socket
