@@ -14,4 +14,5 @@ public static class GameTag
     public static string GODMODE { get; private set; } = "GODMODE";
     public static string RESET { get; private set; } = "RESET";
     public static string Dirt { get; private set; } = "Dirt";
+    public static string Desert { get; private set; } = "Desert";
 }
