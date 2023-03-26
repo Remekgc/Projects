@@ -1,11 +1,15 @@
 # Macro for Unity YAML-based asset files.
 [attr]unityyaml -text merge=unityyamlmerge diff
+
 # Macro for all binary files that should use Git LFS.
 [attr]lfs -text filter=lfs diff=lfs merge=lfs
+
 # Default to auto-normalized line endings.
 * text=auto
+
 # Code
 *.cs text diff=csharp
+
 # Unity Text Assets
 *.meta unityyaml
 *.unity unityyaml
@@ -31,13 +35,20 @@
 *.shadervariants unityyaml
 *.preset unityyaml
 *.asmdef -text diff
+
 # Unity Binary Assets
 *.cubemap lfs
 *.unitypackage lfs
 # Note: Unity terrain assets must have "-Terrain" suffix.
-*-[Tt]errain.asset -unityyaml lfs
+*Terrain*.asset -unityyaml lfs
 # Note: Unity navmesh assets must have "-NavMesh" suffix.
 *-[Nn]av[Mm]esh.asset -unityyaml lfs
+# Note: Unity lightning data asset must have "LightingData" suffix.
+*LightingData.asset -unnityaml lfs
+# Note: Unity lightning data asset must have "Trees" suffix.
+*[Tt]rees.asset -unnityaml lfs
+
+
 # Image
 *.jpg lfs
 *.jpeg lfs
@@ -65,6 +76,7 @@
 *.psd lfs
 *.afphoto lfs
 *.afdesign lfs
+
 # Audio
 *.mp3 lfs
 *.ogg lfs
@@ -75,6 +87,7 @@
 *.it lfs
 *.s3m lfs
 *.xm lfs
+
 # Video
 *.mov lfs
 *.avi lfs
@@ -85,6 +98,7 @@
 *.flv lfs
 *.ogv lfs
 *.wmv lfs
+
 # 3D
 *.fbx lfs
 *.obj lfs
@@ -103,18 +117,23 @@
 *.3dm lfs
 *.bin lfs
 *.glb lfs
+
 # Executables
 *.exe lfs
 *.dll lfs
 *.so lfs
 *.pdb lfs
 *.mdb lfs
+
 # Packaging
 *.zip lfs
 *.7z lfs
 *.gz lfs
 *.rar lfs
 *.tar lfs
+
+
 # Python
 *.pyd filter=lfs diff=lfs merge=lfs -text
+
 *LightingData.asset filter=lfs diff=lfs merge=lfs -text
