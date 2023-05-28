@@ -4,5 +4,6 @@ using UnityEngine;
 
 public static class DebugTag
 {
-    public static readonly string BitwiseOperation = "<color=#db34eb><b>Bitwise operation: </b></color>";
+    public static string BitwiseOperation { get; } = "<color=#db34eb><b>Bitwise operation: </b></color>";
+    public static string Vectors { get; } = "<color=#db34eb><b>Vectors: </b></color>";
 }

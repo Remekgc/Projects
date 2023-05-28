@@ -7,6 +7,7 @@ namespace Location
     public class CoordinateDrawer : MonoBehaviour
     {
         [SerializeField] List<Coordinates> coordinates = new List<Coordinates>();
+        [SerializeField] bool drawLines = false;
         [Header("Screen lines")]
         [SerializeField] Coordinates xStart = new Coordinates();
         [SerializeField] Coordinates xEnd = new Coordinates();
@@ -27,12 +28,25 @@ namespace Location
             //    Coordinates.DrawLine(coordinates[0], coordinates[1], 2f, Color.red);
             //}
 
-            Coordinates.DrawLine(xStart, xEnd, 0.5f, Color.red);
-            Coordinates.DrawLine(yStart, yEnd, 0.5f, Color.blue);
+            Coordinates.DrawLine(xStart, xEnd, 0.6f, Color.red);
+            Coordinates.DrawLine(yStart, yEnd, 0.6f, Color.blue);
             Coordinates.DrawPoint(xStart, 1f, Color.red);
             Coordinates.DrawPoint(xEnd, 1f, Color.red);
             Coordinates.DrawPoint(yStart, 1f, Color.blue);
             Coordinates.DrawPoint(yEnd, 1f, Color.blue);
+
+            if (drawLines)
+            {
+                DrawLines();
+            }
+        }
+
+        void DrawLines()
+        {
+            for (int i = 0; i < coordinates.Count - 1; i++)
+            {
+                Coordinates.DrawLine(coordinates[i], coordinates[i + 1], 0.4f, Color.white);
+            }
         }
     }
 }
