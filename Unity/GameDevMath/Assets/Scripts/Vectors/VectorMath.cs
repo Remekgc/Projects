@@ -54,7 +54,7 @@ namespace Vectors
             float angle = Angle(forwardVector, direction);
             bool clockwise = false;
 
-            if (Cross(forwardVector, direction).z < 0)
+            if (CrossProduct(forwardVector, direction).z < 0)
             {
                 clockwise = true;
             }
@@ -79,17 +79,16 @@ namespace Vectors
 
         static public Coordinates Translate(Coordinates position, Coordinates facing, Coordinates vector)
         {
-            if (Distance(new Coordinates(0, 0, 0), vector) <= 0) 
+            if (Distance(new Coordinates(0, 0, 0), vector) <= 0)
+            {
                 return position;
+            }
+
 
             float angle = Angle(vector, facing);
             float worldAngle = Angle(vector, new Coordinates(0, 1, 0));
-            bool clockwise = false;
 
-            if (Cross(vector, facing).z < 0)
-                clockwise = true;
-
-            vector = Rotate(vector, angle + worldAngle, clockwise);
+            vector = Rotate(vector, angle + worldAngle, CrossProduct(vector, facing).z < 0);
 
             float xVal = position.x + vector.x;
             float yVal = position.y + vector.y;
@@ -98,7 +97,7 @@ namespace Vectors
             return new Coordinates(xVal, yVal, zVal);
         }
 
-        static public Coordinates Cross(Coordinates vector1, Coordinates vector2)
+        static public Coordinates CrossProduct(Coordinates vector1, Coordinates vector2)
         {
             float xMult = vector1.y * vector2.z - vector1.z * vector2.y;
             float yMult = vector1.z * vector2.x - vector1.x * vector2.z;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vectors;
 
 namespace Location.Tank
 {
@@ -12,6 +13,9 @@ namespace Location.Tank
         [SerializeField] TMPro.TMP_Text tankPosition;
         [SerializeField] TMPro.TMP_Text fuelPosition;
         [SerializeField] TMPro.TMP_Text energyAmount;
+        [SerializeField] TMPro.TMP_InputField fuelAmount;
+        [SerializeField] TMPro.TMP_InputField turnAngle;
+
         Coroutine uiUpdate;
 
         private void Start()
@@ -27,6 +31,15 @@ namespace Location.Tank
             }
         }
 
+        public void SetAngle(string amount)
+        {
+            if (float.TryParse(amount, out float angle))
+            {
+                angle *= (Mathf.PI / 180f);
+                tank.transform.up = VectorMath.Rotate(new Coordinates(tank.transform.up), angle, false).Position;
+            }
+        }
+
         IEnumerator IUpdateUI()
         {
             yield return new WaitForSeconds(0.5f);
@@ -38,6 +51,11 @@ namespace Location.Tank
 
                 yield return new WaitForSeconds(0.25f);  
             }
+        }
+
+        private void OnDestroy()
+        {
+            StopCoroutine(uiUpdate);
         }
     }
 }
