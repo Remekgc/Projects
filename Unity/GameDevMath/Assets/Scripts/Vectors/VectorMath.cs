@@ -10,13 +10,15 @@ namespace Vectors
     {
         static public Coordinates GetNormal(Coordinates vector)
         {
+            Coordinates normal = new Coordinates(vector);
+
             float length = Distance(new Coordinates(0, 0, 0), vector);
 
-            vector.x /= length;
-            vector.y /= length;
-            vector.z /= length;
+            normal.x /= length;
+            normal.y /= length;
+            normal.z /= length;
 
-            return vector;
+            return normal;
         }
 
         static public float Distance(Coordinates point1, Coordinates point2)

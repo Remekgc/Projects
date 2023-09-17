@@ -14,13 +14,15 @@ namespace Location
         public Color Color { get => color; }
 
         #region Constructors
-        public Coordinates(float x, float y) : this(new Vector3(x, y, -1), Color.green) {   }
+        public Coordinates(float x, float y) : this(new Vector3(x, y, -1), Color.green) { }
+
+        public Coordinates(Coordinates coordinates) : this(coordinates.position, coordinates.Color) { }
 
         public Coordinates(float x, float y, float z) : this(new Vector3(x, y, z), Color.green) { }
 
         public Coordinates(Vector3 position, Color color)
         {
-            this.position = position;
+            this.position = new Vector3(position.x, position.y, position.z);
             this.color = color;
         }
         public Coordinates() : this(new Vector3(0, 0, -1), Color.green) { }
@@ -78,5 +80,46 @@ namespace Location
             lineRenderer.startWidth = width;
             lineRenderer.endWidth = width;
         }
+
+        public static Coordinates Lerp(Coordinates a, Coordinates b, float t)
+        {
+            Coordinates vector = new Coordinates(b.x - a.x, b.y - a.y, b.z - a.z);
+            float xt = a.x + vector.x * t;
+            float yt = a.y + vector.y * t;
+            float zt = a.z + vector.z * t;
+
+            return new Coordinates(xt, yt, zt);
+        }
+
+        public static Coordinates operator +(Coordinates a, Coordinates b)
+        {
+            Coordinates c = new Coordinates(a.x + b.x, a.y + b.y, a.z + b.z);
+            return c;
+        }
+
+        public static Coordinates operator -(Coordinates a, Coordinates b)
+        {
+            Coordinates c = new Coordinates(a.x - b.x, a.y - b.y, a.z - b.z);
+            return c;
+        }
+
+        public static Coordinates operator *(Coordinates a, float b)
+        {
+            Coordinates c = new Coordinates(a.x * b, a.y * b, a.z * b);
+            return c;
+        }
+
+        public static Coordinates operator /(Coordinates a, float b)
+        {
+            Coordinates c = new Coordinates(a.x / b, a.y / b, a.z / b);
+            return c;
+        }
+
+        public static Coordinates Perp(Coordinates v)
+        {
+            return new Coordinates(-v.y, v.x);
+        }
+
+        public Vector3 ToVector() => Position;
     }
 }
